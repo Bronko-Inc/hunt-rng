@@ -3,3 +3,35 @@ body {
   margin: 0;
   padding: 0;
 }
+
+* {
+  font-family: "Inknut Antiqua", serif;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button {
+  background-color: rgb(127, 27, 29);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 32px;
+  margin: 0;
+  padding: 0 32px;
+  cursor: pointer;
+  transition: background-color linear 100ms;
+  &:hover {
+    background-color: rgb(97, 21, 22);
+  }
+  &:active {
+    background-color: rgb(66, 14, 15);
+  }
+}

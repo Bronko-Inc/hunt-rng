@@ -2,4 +2,33 @@
   width: 100vw;
   height: 100vh;
   background-color: rgb(12, 16, 19);
+  display: flex;
+  flex-direction: column;
+
+  #main-card {
+    align-self: center;
+    width: 80%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+
+    #main-logo,
+    h1 {
+      align-self: center;
+    }
+
+    #main-logo {
+      max-height: 35%;
+    }
+
+    #btn-randomize {
+      margin-top: 40px;
+      align-self: center;
+    }
+
+    #loadout-container {
+      margin-top: 50px;
+    }
+  }
 }
