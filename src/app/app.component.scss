@@ -8,6 +8,9 @@
 
   #main-card {
     align-self: center;
+    padding-top: 35px;
+    justify-content: space-between;
+    box-sizing: border-box;
     width: 80%;
     height: 100%;
     max-width: 1400px;
@@ -21,11 +24,10 @@
     }
 
     #main-logo {
-      max-height: 35%;
+      max-height: 25%;
     }
 
     #btn-randomize {
-      margin-top: 40px;
       align-self: center;
     }
 
@@ -39,8 +41,11 @@
       #items-container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
         align-items: flex-start;
+        span {
+          margin-top: -5px;
+          margin-bottom: 15px;
+        }
       }
 
       #items-container {
