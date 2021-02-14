@@ -1,9 +1,10 @@
-import { Rarity } from './rarity';
+import { AmmoType } from './ammo-type';
 
-export interface Loadout {
-  slots: number;
+export interface WeaponLoadout {
   name: string;
+  slots: number;
   description: string;
   imagePath: string;
-  rarity: Rarity;
+  ammoTypes: AmmoType[];
+  price: number;
 }
