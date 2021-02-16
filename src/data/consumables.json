@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Ammo Box",
+    "price": 65
+  },
+  {
+    "name": "Antidote Shot",
+    "price": 55
+  },
+  {
+    "name": "Big Dynamite Bundle",
+    "price": 110
+  },
+  {
+    "name": "Chaos Bomb",
+    "price": 15
+  },
+  {
+    "name": "Concertina Bomb",
+    "price": 48
+  },
+  {
+    "name": "Dynamite Bundle",
+    "price": 75
+  },
+  {
+    "name": "Dynamite Stick",
+    "price": 18
+  },
+  {
+    "name": "Fire Bomb",
+    "price": 18
+  },
+  {
+    "name": "Flash Bomb",
+    "price": 47
+  },
+  {
+    "name": "Frag Bomb",
+    "price": 70
+  },
+  {
+    "name": "Hellfire Bomb",
+    "price": 70
+  },
+  {
+    "name": "Hive Bomb",
+    "price": 40
+  },
+  {
+    "name": "Liquid Fire Bomb",
+    "price": 23
+  },
+  {
+    "name": "Poison Bomb",
+    "price": 25
+  },
+  {
+    "name": "Stamina Shot",
+    "price": 40
+  },
+  {
+    "name": "Sticky Bomb",
+    "price": 64
+  },
+  {
+    "name": "Vitality Bomb",
+    "price": 65
+  },
+  {
+    "name": "Waxed Dynamite Stick",
+    "price": 24
+  },
+  {
+    "name": "Weak Antidote Shot",
+    "price": 25
+  },
+  {
+    "name": "Weak Stamina Shot",
+    "price": 10
+  },
+  {
+    "name": "Weak Vitality Shot",
+    "price": 10
+  }
+]
