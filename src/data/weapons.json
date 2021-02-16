@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Nagant M1895 Officer Carbine",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 155
+  },
+  {
+    "name": "Nagant M1895 Officer Carbine Deadeye",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 211
+  },
+  {
+    "name": "Winfield M1873",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 75
+  },
+  {
+    "name": "Winfield M1873 Aperture",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 80
+  },
+  {
+    "name": "Winfield M1873 Musket Bayonet",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 137
+  },
+  {
+    "name": "Winfield M1873 Swift",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 128
+  },
+  {
+    "name": "Winfield M1873 Talon",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 100
+  },
+  {
+    "name": "Winfield M1873C",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 41
+  },
+  {
+    "name": "Winfield M1873C Marksman",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 56
+  },
+  {
+    "name": "Winfield M1873C Silencer",
+    "ammoTypes": [1],
+    "slots": 3,
+    "price": 55
+  },
+  {
+    "name": "Bornheim No. 3 Match",
+    "ammoTypes": [1],
+    "slots": 2,
+    "price": 224
+  },
+  {
+    "name": "Nagant M1895 Deadeye",
+    "ammoTypes": [1],
+    "slots": 2,
+    "price": 42
+  },
+  {
+    "name": "Nagant M1895 Precision",
+    "ammoTypes": [1],
+    "slots": 2,
+    "price": 29
+  },
+  {
+    "name": "Winfield M1873C Vandal",
+    "ammoTypes": [1],
+    "slots": 2,
+    "price": 35
+  },
+  {
+    "name": "Winfield M1873C Vandal Striker",
+    "ammoTypes": [1],
+    "slots": 2,
+    "price": 39
+  },
+  {
+    "name": "Winfield M1873C Vandal Deadeye",
+    "ammoTypes": [1],
+    "slots": 2,
+    "price": 45
+  },
+  {
+    "name": "LeMat Mark II Revolver",
+    "ammoTypes": [1, 4],
+    "slots": 1,
+    "price": 95
+  },
+  {
+    "name": "Bornheim No. 3",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 201
+  },
+  {
+    "name": "Bornheim No. 3 Extended",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 306
+  },
+  {
+    "name": "Caldwell Conversion Chain Pistol",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 50
+  },
+  {
+    "name": "Caldwell Conversion Pistol",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 26
+  },
+  {
+    "name": "Nagant M1895",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 24
+  },
+  {
+    "name": "Nagant M1895 Officer",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 66
+  },
+  {
+    "name": "Nagant M1895 Officer Brawler",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 80
+  },
+  {
+    "name": "Nagant M1895 Silencer",
+    "ammoTypes": [1],
+    "slots": 1,
+    "price": 53
+  },
+  {
+    "name": "Springfield 1866",
+    "ammoTypes": [2],
+    "slots": 3,
+    "price": 38
+  },
+  {
+    "name": "Springfield 1866 Marksman",
+    "ammoTypes": [2],
+    "slots": 3,
+    "price": 73
+  },
+  {
+    "name": "Vetterli 71 Karabiner",
+    "ammoTypes": [2],
+    "slots": 3,
+    "price": 105
+  },
+  {
+    "name": "Vetterli 71 Karabiner Bayonet",
+    "ammoTypes": [2],
+    "slots": 3,
+    "price": 155
+  },
+  {
+    "name": "Vetterli 71 Karabiner Deadeye",
+    "ammoTypes": [2],
+    "slots": 3,
+    "price": 130
+  },
+  {
+    "name": "Springfield 1866 1",
+    "ammoTypes": [2],
+    "slots": 2,
+    "price": 33
+  },
+  {
+    "name": "Springfield 1866 1 Deadeye",
+    "ammoTypes": [2],
+    "slots": 2,
+    "price": 46
+  },
+  {
+    "name": "Springfield 1866 1 Striker",
+    "ammoTypes": [2],
+    "slots": 2,
+    "price": 56
+  },
+  {
+    "name": "Caldwell Pax",
+    "ammoTypes": [2],
+    "slots": 1,
+    "price": 100
+  },
+  {
+    "name": "Caldwell Pax Claw",
+    "ammoTypes": [2],
+    "slots": 1,
+    "price": 125
+  },
+  {
+    "name": "Lebel 1886",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 397
+  },
+  {
+    "name": "Lebel 1886 Marksman",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 437
+  },
+  {
+    "name": "Lebel 1886 Talon",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 422
+  },
+  {
+    "name": "Martini-Henry IC1",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 122
+  },
+  {
+    "name": "Martini-Henry IC1 Deadeye",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 145
+  },
+  {
+    "name": "Martini-Henry IC1 Marksman",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 173
+  },
+  {
+    "name": "Martini-Henry IC1 Riposte",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 164
+  },
+  {
+    "name": "Mosin-Nagant M1891",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 490
+  },
+  {
+    "name": "Mosin-Nagant M1891 Bayonet",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 540
+  },
+  {
+    "name": "Mosin-Nagant M1891 Sniper",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 550
+  },
+  {
+    "name": "Mosin-Nagant M1891 Avtomat",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 1250
+  },
+  {
+    "name": "Sparks LRR",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 130
+  },
+  {
+    "name": "Sparks LRR Silencer",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 150
+  },
+  {
+    "name": "Sparks LRR Sniper",
+    "ammoTypes": [3],
+    "slots": 3,
+    "price": 199
+  },
+  {
+    "name": "Mosin-Nagant M1891 Obrez",
+    "ammoTypes": [3],
+    "slots": 2,
+    "price": 290
+  },
+  {
+    "name": "Mosin-Nagant M1891 Obrez Drum",
+    "ammoTypes": [3],
+    "slots": 2,
+    "price": 350
+  },
+  {
+    "name": "Mosin-Nagant M1891 Obrez Mace",
+    "ammoTypes": [3],
+    "slots": 2,
+    "price": 310
+  },
+  {
+    "name": "Caldwell Conversion Uppercut",
+    "ammoTypes": [3],
+    "slots": 1,
+    "price": 275
+  },
+  {
+    "name": "Caldwell Rival 78",
+    "ammoTypes": [4],
+    "slots": 3,
+    "price": 100
+  },
+  {
+    "name": "Crown & King Auto-5",
+    "ammoTypes": [4],
+    "slots": 3,
+    "price": 600
+  },
+  {
+    "name": "Romero 77",
+    "ammoTypes": [4],
+    "slots": 3,
+    "price": 34
+  },
+  {
+    "name": "Romero 77 Talon",
+    "ammoTypes": [4],
+    "slots": 3,
+    "price": 59
+  },
+  {
+    "name": "Specter 1882",
+    "ammoTypes": [4],
+    "slots": 3,
+    "price": 188
+  },
+  {
+    "name": "Specter 1882 Bayonet",
+    "ammoTypes": [4],
+    "slots": 3,
+    "price": 223
+  },
+  {
+    "name": "Caldwell Rival 78 Handcannon",
+    "ammoTypes": [4],
+    "slots": 2,
+    "price": 85
+  },
+  {
+    "name": "Romero 77 Handcannon",
+    "ammoTypes": [4],
+    "slots": 2,
+    "price": 26
+  },
+  {
+    "name": "Romero 77 Handcannon Hatchet",
+    "ammoTypes": [4],
+    "slots": 2,
+    "price": 62
+  },
+  {
+    "name": "Specter 1882 1",
+    "ammoTypes": [4],
+    "slots": 2,
+    "price": 164
+  },
+  {
+    "name": "Bomb Lance",
+    "ammoTypes": [6],
+    "slots": 3,
+    "price": 199
+  },
+  {
+    "name": "Crossbow",
+    "ammoTypes": [6],
+    "slots": 3,
+    "price": 73
+  },
+  {
+    "name": "Crossbow Explosive",
+    "ammoTypes": [6],
+    "slots": 3,
+    "price": 130
+  },
+  {
+    "name": "Crossbow Shotbolt",
+    "ammoTypes": [6],
+    "slots": 3,
+    "price": 150
+  },
+  {
+    "name": "Nitro Express Rifle",
+    "ammoTypes": [6],
+    "slots": 3,
+    "price": 1015
+  },
+  {
+    "name": "Dolch 96 Precision",
+    "ammoTypes": [6],
+    "slots": 2,
+    "price": 790
+  },
+  {
+    "name": "Hand Crossbow",
+    "ammoTypes": [6],
+    "slots": 2,
+    "price": 44
+  },
+  {
+    "name": "Hand Crossbow Poison",
+    "ammoTypes": [6],
+    "slots": 2,
+    "price": 51
+  },
+  {
+    "name": "Dolch 96",
+    "ammoTypes": [6],
+    "slots": 1,
+    "price": 750
+  },
+  {
+    "name": "Combat Axe",
+    "ammoTypes": [5],
+    "slots": 2,
+    "price": 5
+  },
+  {
+    "name": "Cavalry Saber",
+    "ammoTypes": [5],
+    "slots": 1,
+    "price": 60
+  },
+  {
+    "name": "Machete",
+    "ammoTypes": [5],
+    "slots": 1,
+    "price": 18
+  }
+]
