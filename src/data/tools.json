@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Knife",
+    "knifeAndHeal": true,
+    "price": 20
+  },
+  {
+    "name": "Heavy Knife",
+    "knifeAndHeal": true,
+    "price": 25
+  },
+  {
+    "name": "Knuckle Knife",
+    "knifeAndHeal": true,
+    "price": 15
+  },
+  {
+    "name": "Dusters",
+    "knifeAndHeal": true,
+    "price": 15
+  },
+  {
+    "name": "First Aid Kit",
+    "knifeAndHeal": true,
+    "price": 30
+  },
+  {
+    "name": "Alert Trip Mine",
+    "knifeAndHeal": false,
+    "price": 60
+  },
+  {
+    "name": "Blank Fire Decoys",
+    "knifeAndHeal": false,
+    "price": 45
+  },
+  {
+    "name": "Choke Bomb",
+    "knifeAndHeal": false,
+    "price": 25
+  },
+  {
+    "name": "Concertina Trip Mine",
+    "knifeAndHeal": false,
+    "price": 90
+  },
+  {
+    "name": "Decoy Fuses",
+    "knifeAndHeal": false,
+    "price": 60
+  },
+  {
+    "name": "Decoys",
+    "knifeAndHeal": false,
+    "price": 6
+  },
+  {
+    "name": "Electric Lamp",
+    "knifeAndHeal": false,
+    "price": 5
+  },
+  {
+    "name": "Flare Pistol",
+    "knifeAndHeal": false,
+    "price": 36
+  },
+  {
+    "name": "Fusees",
+    "knifeAndHeal": false,
+    "price": 10
+  },
+  {
+    "name": "Poison Trip Mine",
+    "knifeAndHeal": false,
+    "price": 60
+  },
+  {
+    "name": "Quad Derringer",
+    "knifeAndHeal": false,
+    "price": 30
+  },
+  {
+    "name": "Spyglass",
+    "knifeAndHeal": false,
+    "price": 8
+  },
+  {
+    "name": "Throwing Knives",
+    "knifeAndHeal": false,
+    "price": 40
+  }
+]
