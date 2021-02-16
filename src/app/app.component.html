@@ -12,9 +12,9 @@
             <img *ngIf="weapon.slots === 2" src="assets/img/backdrops/2-slot.png">
             <img *ngIf="weapon.slots === 1" src="assets/img/backdrops/1-slot.png">
           </div>
-          <span *ngIf="weapon.slots === 3">Large slot</span>
-          <span *ngIf="weapon.slots === 2">Medium slot</span>
-          <span *ngIf="weapon.slots === 1">Small slot</span>
+          <span *ngIf="weapon.slots === 3">Large slot - {{weapon.name}}</span>
+          <span *ngIf="weapon.slots === 2">Medium slot - {{weapon.name}}</span>
+          <span *ngIf="weapon.slots === 1">Small slot - {{weapon.name}}</span>
         </div>
       </div>
       <div id="items-container">
