@@ -17,21 +17,23 @@
           <span *ngIf="weapon.slots === 1">Small slot - {{weapon.name}}</span>
         </div>
       </div>
-      <div id="items-container">
+      <div id="items-container" *ngIf="randomTools.length">
         <div id="tools-container">
           <img src="assets/img/backdrops/item.png">
           <img src="assets/img/backdrops/item.png">
           <img src="assets/img/backdrops/item.png">
           <img src="assets/img/backdrops/item.png">
         </div>
-        <span>Tools</span>
+        <span>Tools - {{randomTools[0].name}}, {{randomTools[1].name}}, {{randomTools[2].name}},
+          {{randomTools[3].name}}</span>
         <div id="consumables-container">
           <img src="assets/img/backdrops/item.png">
           <img src="assets/img/backdrops/item.png">
           <img src="assets/img/backdrops/item.png">
           <img src="assets/img/backdrops/item.png">
         </div>
-        <span>Consumables</span>
+        <span>Consumables - {{randomConsumables[0].name}}, {{randomConsumables[1].name}}, {{randomConsumables[2].name}},
+          {{randomConsumables[3].name}}</span>
       </div>
     </div>
   </div>
