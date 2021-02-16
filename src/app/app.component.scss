@@ -37,7 +37,7 @@
       overflow: auto;
       gap: 20px;
 
-      #weapon-container,
+      #weapons-container,
       #items-container {
         display: flex;
         flex-direction: column;
@@ -45,6 +45,16 @@
         span {
           margin-top: -5px;
           margin-bottom: 15px;
+        }
+      }
+
+      #weapons-container {
+        .weapon-container {
+          display: flex;
+          flex-direction: column;
+          .weapon-img-container {
+            height: 166px;
+          }
         }
       }
 
