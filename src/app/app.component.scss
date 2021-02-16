@@ -54,6 +54,14 @@
           flex-direction: column;
           .weapon-img-container {
             height: 166px;
+            position: relative;
+            width: fit-content;
+            .price-tag {
+              position: absolute;
+              right: 10px;
+              bottom: 0;
+              margin: 0;
+            }
           }
         }
       }

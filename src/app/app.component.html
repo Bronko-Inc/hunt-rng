@@ -11,6 +11,7 @@
             <img *ngIf="weapon.slots === 3" src="assets/img/backdrops/3-slot.png">
             <img *ngIf="weapon.slots === 2" src="assets/img/backdrops/2-slot.png">
             <img *ngIf="weapon.slots === 1" src="assets/img/backdrops/1-slot.png">
+            <span class="price-tag">${{weapon.price}}</span>
           </div>
           <span *ngIf="weapon.slots === 3">Large slot - {{weapon.name}}</span>
           <span *ngIf="weapon.slots === 2">Medium slot - {{weapon.name}}</span>
