@@ -34,6 +34,7 @@
     #loadout-container {
       margin-top: 50px;
       display: flex;
+      justify-content: space-between;
       overflow: auto;
       gap: 20px;
 
