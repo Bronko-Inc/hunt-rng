@@ -5,36 +5,38 @@
     <button (click)="randomize()" id="btn-randomize">Randomize</button>
 
     <div id="loadout-container">
-      <div id="weapons-container">
-        <div *ngFor="let weapon of randomWeapons" class="weapon-container">
-          <div class="weapon-img-container">
+      <div class="main-column-container">
+        <div *ngFor="let weapon of randomWeapons" class="column" [tooltip]="weapon.name">
+          <div class="item-container">
             <img *ngIf="weapon.slots === 3" src="assets/img/backdrops/3-slot.png">
             <img *ngIf="weapon.slots === 2" src="assets/img/backdrops/2-slot.png">
             <img *ngIf="weapon.slots === 1" src="assets/img/backdrops/1-slot.png">
             <span class="price-tag">${{weapon.price}}</span>
           </div>
-          <span *ngIf="weapon.slots === 3">Large slot - {{weapon.name}}</span>
-          <span *ngIf="weapon.slots === 2">Medium slot - {{weapon.name}}</span>
-          <span *ngIf="weapon.slots === 1">Small slot - {{weapon.name}}</span>
+          <span *ngIf="weapon.slots === 3">Large slot</span>
+          <span *ngIf="weapon.slots === 2">Medium slot</span>
+          <span *ngIf="weapon.slots === 1">Small slot</span>
         </div>
       </div>
-      <div id="items-container" *ngIf="randomTools.length">
-        <div id="tools-container">
-          <img src="assets/img/backdrops/item.png">
-          <img src="assets/img/backdrops/item.png">
-          <img src="assets/img/backdrops/item.png">
-          <img src="assets/img/backdrops/item.png">
+      <div class="main-column-container" *ngIf="randomTools.length">
+        <div class="row">
+          <div *ngFor="let tool of randomTools" class="column" [tooltip]="tool.name">
+            <div class="item-container">
+              <img src="assets/img/backdrops/item.png">
+              <span class="price-tag">${{tool.price}}</span>
+            </div>
+          </div>
         </div>
-        <span>Tools - {{randomTools[0].name}}, {{randomTools[1].name}}, {{randomTools[2].name}},
-          {{randomTools[3].name}}</span>
-        <div id="consumables-container">
-          <img src="assets/img/backdrops/item.png">
-          <img src="assets/img/backdrops/item.png">
-          <img src="assets/img/backdrops/item.png">
-          <img src="assets/img/backdrops/item.png">
+        <span>Tools</span>
+        <div class="row">
+          <div *ngFor="let consumable of randomConsumables" class="column" [tooltip]="consumable.name">
+            <div class="item-container">
+              <img src="assets/img/backdrops/item.png">
+              <span class="price-tag">${{consumable.price}}</span>
+            </div>
+          </div>
         </div>
-        <span>Consumables - {{randomConsumables[0].name}}, {{randomConsumables[1].name}}, {{randomConsumables[2].name}},
-          {{randomConsumables[3].name}}</span>
+        <span>Consumables</span>
       </div>
     </div>
   </div>
