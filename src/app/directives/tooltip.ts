@@ -64,12 +64,13 @@ export class TooltipDirective {
     this._renderer.setStyle(this._tooltip, 'top', `${top + scrollPos}px`);
     this._renderer.setStyle(this._tooltip, 'left', `${left}px`);
   }
+
   private hide() {
-    this._renderer.removeClass(this._tooltip, 'visible');
+    const toRemove = this._tooltip;
+    this._renderer.removeClass(toRemove, 'visible');
     this.shown = false;
-    this._hideTimeout = setTimeout(() => {
-      this._renderer.removeChild(document.body, this._tooltip);
-      this._tooltip = undefined;
+    setTimeout(() => {
+      this._renderer.removeChild(document.body, toRemove);
     }, 500) as any;
   }
 }
