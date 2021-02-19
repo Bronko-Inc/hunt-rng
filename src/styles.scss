@@ -35,3 +35,38 @@ button {
     background-color: rgb(66, 14, 15);
   }
 }
+
+$fontSize: 20px;
+$padding: 2px;
+
+.tooltip {
+  background: url("assets/img/backdrops/text-bg2.png");
+  background-clip: border-box;
+  background-size: contain;
+  background-repeat: round;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 250ms;
+  padding: $padding 0;
+  font-size: $fontSize;
+  &.visible {
+    opacity: 1;
+  }
+  &::before,
+  &::after {
+    content: " ";
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    width: calc(#{$fontSize} * 2.6 + 2 * #{$padding});
+    height: calc(#{$fontSize} * 2.6 + 2 * #{$padding});
+  }
+  &::before {
+    background-image: url("assets/img/backdrops/text-bg1.png");
+    left: calc(-2.6 * #{$fontSize} - 2 * #{$padding});
+  }
+  &::after {
+    background-image: url("assets/img/backdrops/text-bg3.png");
+    right: calc(- 2.6 * #{$fontSize} - 2 * #{$padding});
+  }
+}
