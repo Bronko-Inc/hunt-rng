@@ -537,13 +537,15 @@
     "slots": 3,
     "price": 73,
     "maxCustomAmmo": 2,
-    "customAmmo": [0]
+    "customAmmo": [48, 49]
   },
   {
     "name": "Nitro Express Rifle",
     "ammoTypes": [6],
     "slots": 3,
     "price": 1015
+    "maxCustomAmmo": 1,
+    "customAmmo": [50, 51]
   },
   {
     "name": "Dolch 96 Precision",
@@ -556,6 +558,8 @@
     "ammoTypes": [6],
     "slots": 1,
     "price": 44
+    "maxCustomAmmo": 2,
+    "customAmmo": [52, 53, 54]
   },
   {
     "name": "Dolch 96",
