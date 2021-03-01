@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "name": "Nagant M1895 Poison Ammo",
+    "price": 35 
+  },
+  {
+    "id": 2,
+    "name": "Nagant M1895 High Velocity Ammo",
+    "price": 90 
+  },
+  {
+    "id": 3,
+    "name": "Winfield M1873C High Velocity Ammo",
+    "price": 90 
+  },
+  {
+    "id": 4,
+    "name": "Winfield M1873C Incendiary Ammo",
+    "price": 50 
+  },
+  {
+    "id": 5,
+    "name": "Nagant M1895 Officer Poison Ammo",
+    "price": 35 
+  },
+  {
+    "id": 6,
+    "name": "Nagant M1895 officer High Velocity Ammo",
+    "price": 90 
+  },
+  {
+    "id": 7,
+    "name": "Winfield M1873 Incendiary Ammo",
+    "price": 50 
+  },
+  {
+    "id": 8,
+    "name": "Winfield M1873 High Velocity Ammo",
+    "price": 90 
+  },
+  {
+    "id": 9,
+    "name": "Caldwell Conversion Pistol Dumdum Ammo",
+    "price": 60 
+  },
+  {
+    "id": 10,
+    "name": "Caldwell Conversion Pistol Full Metal Jacket Ammo",
+    "price": 60 
+  },
+  {
+    "id": 11,
+    "name": "Bornheim No. 3 Incendiary Ammo",
+    "price": 50 
+  },
+  {
+    "id": 12,
+    "name": "Bornheim No. 3 High Velocity Ammo",
+    "price": 90 
+  },
+  {
+    "id": 13,
+    "name": "LeMat Mark II Incendiary Ammo",
+    "price": 50 
+  },
+  {
+    "id": 14,
+    "name": "LeMat Mark II Full Metal Jacket Ammo",
+    "price": 60 
+  },
+  {
+    "id": 15,
+    "name": "Springfield 1866 Dumdum Ammo",
+    "price": 90 
+  },
+  {
+    "id": 16,
+    "name": "Springfield 1866 Explosive Ammo",
+    "price": 90 
+  },
+  {
+    "id": 17,
+    "name": "Vetterli 71 Karabiner Incendiary Ammo",
+    "price": 60 
+  },
+  {
+    "id": 18,
+    "name": "Vetterli 71 Karabiner Full Metal Jacket Ammo",
+    "price": 75 
+  },
+  {
+    "id": 19,
+    "name": "Caldwell Pax Incendiary Ammo",
+    "price": 60 
+  },
+  {
+    "id": 20,
+    "name": "Winfield M1876 Centennial Poison Ammo",
+    "price": 45 
+  },
+  {
+    "id": 21,
+    "name": "Winfield M1876 Centennial Full Metal Jacket Ammo",
+    "price": 75 
+  },
+  {
+    "id": 22,
+    "name": "Martini-Henry IC1 Incendiary Ammo",
+    "price": 70 
+  },
+  {
+    "id": 23,
+    "name": "Martini-Henry IC1 Full Metal Jacket Ammo",
+    "price": 85 
+  },
+  {
+    "id": 24,
+    "name": "Martini-Henry IC1 Explosive Ammo",
+    "price": 120 
+  },
+  {
+    "id": 25,
+    "name": "Caldwell Conversion Uppercut Incendiary Ammo",
+    "price": 70 
+  },
+  {
+    "id": 26,
+    "name": "Sparks LRR Incendiary Ammo",
+    "price": 70 
+  },
+  {
+    "id": 27,
+    "name": "Sparks LRR Poison Ammo",
+    "price": 60 
+  },
+  {
+    "id": 28,
+    "name": "Lebel 1886 Incendiary Ammo",
+    "price": 70 
+  },
+  {
+    "id": 29,
+    "name": "Lebel 1886 Spitzer Ammo",
+    "price": 220 
+  },
+  {
+    "id": 30,
+    "name": "Mosin-Nagant M1891 Incendiary Ammo",
+    "price": 70 
+  },
+  {
+    "id": 31,
+    "name": "Mosin-Nagant M1891 Spitzer Ammo",
+    "price": 220 
+  },
+  {
+    "id": 32,
+    "name": "Romero 77 Starshell Ammo",
+    "price": 10 
+  },
+  {
+    "id": 33,
+    "name": "Romero 77 Dragon Breath Ammo",
+    "price": 50 
+  },
+  {
+    "id": 34,
+    "name": "Romero 77 Penny Shot Ammo",
+    "price": 25 
+  },
+  {
+    "id": 35,
+    "name": "Romero 77 Slug Ammo",
+    "price": 150 
+  },
+  {
+    "id": 36,
+    "name": "Caldwell Rival 78 Flechette Ammo",
+    "price": 45 
+  },
+  {
+    "id": 37,
+    "name": "Caldwell Rival 78 Slug Ammo",
+    "price": 150 
+  },
+  {
+    "id": 38,
+    "name": "Specter 1882 Flechette Ammo",
+    "price": 45 
+  },
+  {
+    "id": 39,
+    "name": "Specter 1882 Dragon Breath Ammo",
+    "price": 50 
+  },
+  {
+    "id": 40,
+    "name": "Specter 1882 Slug Ammo",
+    "price": 150 
+  },
+  {
+    "id": 41,
+    "name": "LeMat Mark II Starshell Ammo",
+    "price": 10 
+  },
+  {
+    "id": 42,
+    "name": "LeMat Mark II Dragon Breath Ammo",
+    "price": 50 
+  },
+  {
+    "id": 43,
+    "name": "LeMat Mark II Slug Ammo",
+    "price": 150 
+  },
+  {
+    "id": 44,
+    "name": "Winfield 1887 Terminus Flechette Ammo",
+    "price": 45 
+  },
+  {
+    "id": 45,
+    "name": "Winfield 1887 Terminus Penny Shot Ammo",
+    "price": 25 
+  },
+  {
+    "id": 46,
+    "name": "Crown & King Auto-5 Penny Shot Ammo",
+    "price": 25 
+  }
+]
