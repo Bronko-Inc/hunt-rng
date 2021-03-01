@@ -62,12 +62,14 @@
   {
     "id": 13,
     "name": "LeMat Mark II Incendiary Ammo",
-    "price": 50
+    "price": 50,
+    "blocklist": [14]
   },
   {
     "id": 14,
     "name": "LeMat Mark II Full Metal Jacket Ammo",
-    "price": 60
+    "price": 60,
+    "blocklist": [13]
   },
   {
     "id": 15,
@@ -202,17 +204,20 @@
   {
     "id": 41,
     "name": "LeMat Mark II Starshell Ammo",
-    "price": 10
+    "price": 10,
+    "blocklist": [42, 43]
   },
   {
     "id": 42,
     "name": "LeMat Mark II Dragon Breath Ammo",
-    "price": 50
+    "price": 50,
+    "blocklist": [41, 43]
   },
   {
     "id": 43,
     "name": "LeMat Mark II Slug Ammo",
-    "price": 150
+    "price": 150,
+    "blocklist": [41, 42]
   },
   {
     "id": 44,

@@ -85,7 +85,14 @@ export class AppComponent implements OnInit {
           }
           for (let j = 0; j < customAmmoAmount; j++) {
             this.randomCustomAmmo[i]?.push(
-              this.randomFromArray(weapon.customAmmo, this.randomCustomAmmo[0])
+              this.randomFromArray(weapon.customAmmo, [
+                ...this.randomCustomAmmo[i],
+                ...this._customAmmo.filter((ca) =>
+                  this.randomCustomAmmo[i].some((rc) =>
+                    rc.blocklist?.includes(ca.id)
+                  )
+                ),
+              ])
             );
           }
         }
