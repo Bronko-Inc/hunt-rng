@@ -16,8 +16,8 @@
                 <span class="price-tag">${{weapon.price}}</span>
               </div>
               <ng-container *ngFor="let ammo of randomCustomAmmo[i]">
-                <div class="ammo-container" *ngIf="ammo" [tooltip]="ammo.name">
-
+                <div class="ammo-container img-container" *ngIf="ammo" [tooltip]="ammo.name">
+                  <span class="price-tag">${{ammo.price}}</span>
                 </div>
               </ng-container>
             </div>

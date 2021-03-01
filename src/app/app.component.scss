@@ -59,8 +59,13 @@
             width: fit-content;
             .item-ammo-container {
               display: flex;
+              .img-container {
+                position: relative;
+                height: 166px;
+              }
               .ammo-container {
                 background-color: magenta;
+                height: 166px;
                 width: 70px;
               }
             }
