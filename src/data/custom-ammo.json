@@ -238,5 +238,15 @@
     "id": 47,
     "name": "Caldwell Pax Dumdum Ammo",
     "price": 90
+  },
+  {
+    "id": 48,
+    "name": "Crossbow Explosive Bolt",
+    "price": 70
+  },
+  {
+    "id": 49,
+    "name": "Crossbow Shot Bolt",
+    "price": 80
   }
 ]
