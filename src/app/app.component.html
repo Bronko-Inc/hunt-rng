@@ -6,12 +6,21 @@
 
     <div id="loadout-container">
       <div class="main-column-container">
-        <div *ngFor="let weapon of randomWeapons" class="column" [tooltip]="weapon.name">
+        <div *ngFor="let weapon of randomWeapons; let i = index" class="column">
           <div class="item-container">
-            <img *ngIf="weapon.slots === 3" src="assets/img/backdrops/3-slot.png">
-            <img *ngIf="weapon.slots === 2" src="assets/img/backdrops/2-slot.png">
-            <img *ngIf="weapon.slots === 1" src="assets/img/backdrops/1-slot.png">
-            <span class="price-tag">${{weapon.price}}</span>
+            <div class="item-ammo-container">
+              <div class="img-container" [tooltip]="weapon.name">
+                <img *ngIf="weapon.slots === 3" src="assets/img/backdrops/3-slot.png">
+                <img *ngIf="weapon.slots === 2" src="assets/img/backdrops/2-slot.png">
+                <img *ngIf="weapon.slots === 1" src="assets/img/backdrops/1-slot.png">
+                <span class="price-tag">${{weapon.price}}</span>
+              </div>
+              <ng-container *ngFor="let ammo of randomCustomAmmo[i]">
+                <div class="ammo-container" *ngIf="ammo" [tooltip]="ammo.name">
+
+                </div>
+              </ng-container>
+            </div>
           </div>
           <span *ngIf="weapon.slots === 3">Large slot</span>
           <span *ngIf="weapon.slots === 2">Medium slot</span>

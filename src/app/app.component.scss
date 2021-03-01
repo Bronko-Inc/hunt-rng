@@ -57,6 +57,13 @@
             height: 166px;
             position: relative;
             width: fit-content;
+            .item-ammo-container {
+              display: flex;
+              .ammo-container {
+                background-color: magenta;
+                width: 70px;
+              }
+            }
             .price-tag {
               position: absolute;
               right: 10px;

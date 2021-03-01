@@ -9,7 +9,7 @@ import { WeaponDto } from './models/weapon.dto';
 import { WeaponLoadout } from './models/weapon.model';
 import { ApiService } from './services/api.service';
 
-export const CUSTOM_AMMO_RATIO = 0.25;
+export const CUSTOM_AMMO_RATIO = 0.5;
 export const CUSTOM_AMMO_MULTIPLE_RATIO = 0.25;
 
 @Component({
