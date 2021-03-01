@@ -248,5 +248,30 @@
     "id": 49,
     "name": "Crossbow Shot Bolt",
     "price": 80
+  },
+  {
+    "id": 50,
+    "name": "Nitro Express Rifle Dumdum Ammo",
+    "price": 150
+  },
+  {
+    "id": 51,
+    "name": "Nitro Express Rifle Explosive Ammo",
+    "price": 200
+  },
+  {
+    "id": 52,
+    "name": "Hand Crossbow Poison Bolt",
+    "price": 25
+  },
+  {
+    "id": 53,
+    "name": "Hand Crossbow Chaos Bolt",
+    "price": 10
+  },
+  {
+    "id": 54,
+    "name": "Hand Crossbow Choke Bolt",
+    "price": 20
   }
 ]
