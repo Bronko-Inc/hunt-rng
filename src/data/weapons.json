@@ -150,6 +150,12 @@
     "price": 53
   },
   {
+    "name": "Winfield M1876 Centennial",
+    "ammoTypes": [2],
+    "slots": 3,
+    "price": 338
+  },
+  {
     "name": "Springfield 1866",
     "ammoTypes": [2],
     "slots": 3,
@@ -318,6 +324,12 @@
     "price": 275
   },
   {
+    "name": "Winfield 1887 Terminus",
+    "ammoTypes": [4],
+    "slots": 3,
+    "price": 309
+  },
+  {
     "name": "Caldwell Rival 78",
     "ammoTypes": [4],
     "slots": 3,
@@ -352,6 +364,12 @@
     "ammoTypes": [4],
     "slots": 3,
     "price": 223
+  },
+  {
+    "name": "Winfield 1887 Terminus Handcannon",
+    "ammoTypes": [4],
+    "slots": 2,
+    "price": 289
   },
   {
     "name": "Caldwell Rival 78 Handcannon",
