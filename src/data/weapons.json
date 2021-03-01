@@ -543,7 +543,7 @@
     "name": "Nitro Express Rifle",
     "ammoTypes": [6],
     "slots": 3,
-    "price": 1015
+    "price": 1015,
     "maxCustomAmmo": 1,
     "customAmmo": [50, 51]
   },
@@ -557,7 +557,7 @@
     "name": "Hand Crossbow",
     "ammoTypes": [6],
     "slots": 1,
-    "price": 44
+    "price": 44,
     "maxCustomAmmo": 2,
     "customAmmo": [52, 53, 54]
   },
