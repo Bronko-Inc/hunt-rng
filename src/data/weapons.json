@@ -180,19 +180,19 @@
     "price": 130
   },
   {
-    "name": "Springfield 1866 1",
+    "name": "Springfield 1866",
     "ammoTypes": [2],
     "slots": 2,
     "price": 33
   },
   {
-    "name": "Springfield 1866 1 Deadeye",
+    "name": "Springfield 1866 Deadeye",
     "ammoTypes": [2],
     "slots": 2,
     "price": 46
   },
   {
-    "name": "Springfield 1866 1 Striker",
+    "name": "Springfield 1866 Striker",
     "ammoTypes": [2],
     "slots": 2,
     "price": 56
@@ -372,7 +372,7 @@
     "price": 62
   },
   {
-    "name": "Specter 1882 1",
+    "name": "Specter 1882 Compact",
     "ammoTypes": [4],
     "slots": 2,
     "price": 164
@@ -390,18 +390,6 @@
     "price": 73
   },
   {
-    "name": "Crossbow Explosive",
-    "ammoTypes": [6],
-    "slots": 3,
-    "price": 130
-  },
-  {
-    "name": "Crossbow Shotbolt",
-    "ammoTypes": [6],
-    "slots": 3,
-    "price": 150
-  },
-  {
     "name": "Nitro Express Rifle",
     "ammoTypes": [6],
     "slots": 3,
@@ -416,14 +404,8 @@
   {
     "name": "Hand Crossbow",
     "ammoTypes": [6],
-    "slots": 2,
+    "slots": 1,
     "price": 44
-  },
-  {
-    "name": "Hand Crossbow Poison",
-    "ammoTypes": [6],
-    "slots": 2,
-    "price": 51
   },
   {
     "name": "Dolch 96",
