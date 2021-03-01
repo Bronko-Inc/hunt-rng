@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsumableDto } from './models/consumable.dto';
 import { ConsumableLoadout } from './models/consumable.model';
+import { CustomAmmoDto } from './models/custom-ammo.dto';
+import { CustomAmmoLoadout } from './models/custom-ammo.model';
 import { ToolDto } from './models/tool.dto';
 import { ToolLoadout } from './models/tool.model';
 import { WeaponDto } from './models/weapon.dto';
 import { WeaponLoadout } from './models/weapon.model';
 import { ApiService } from './services/api.service';
+
+export const CUSTOM_AMMO_RATIO = 0.25;
+export const CUSTOM_AMMO_MULTIPLE_RATIO = 0.25;
 
 @Component({
   selector: 'app-root',
@@ -14,12 +19,20 @@ import { ApiService } from './services/api.service';
 })
 export class AppComponent implements OnInit {
   private readonly _apiService: ApiService;
+  public includeCustomAmmo: boolean = true;
+
   private _weapons: WeaponLoadout[] = [];
   private _tools: ToolLoadout[] = [];
   private _consumables: ConsumableLoadout[] = [];
+  private _customAmmo: CustomAmmoLoadout[] = [];
+
   public randomWeapons: WeaponLoadout[] = [];
   public randomTools: ToolLoadout[] = [];
   public randomConsumables: ConsumableLoadout[] = [];
+  public randomCustomAmmo: [CustomAmmoLoadout[], CustomAmmoLoadout[]] = [
+    [],
+    [],
+  ];
 
   constructor(apiService: ApiService) {
     this._apiService = apiService;
@@ -56,20 +69,49 @@ export class AppComponent implements OnInit {
     this.randomWeapons = [firstWeapon, secondWeapon].sort(
       (a, b) => b.slots - a.slots
     );
+
+    this.randomCustomAmmo = [[], []];
+
+    if (this.includeCustomAmmo) {
+      for (let i = 0; i < this.randomWeapons.length; i++) {
+        const weapon = this.randomWeapons[i];
+        if (Math.random() < CUSTOM_AMMO_RATIO) {
+          let customAmmoAmount = 1;
+          if (
+            weapon.maxCustomAmmo > customAmmoAmount &&
+            Math.random() < CUSTOM_AMMO_MULTIPLE_RATIO
+          ) {
+            customAmmoAmount = weapon.maxCustomAmmo;
+          }
+          for (let j = 0; j < customAmmoAmount; j++) {
+            this.randomCustomAmmo[i]?.push(
+              this.randomFromArray(weapon.customAmmo, this.randomCustomAmmo[0])
+            );
+          }
+        }
+      }
+    }
   }
 
   async ngOnInit(): Promise<void> {
-    [this._weapons, this._tools, this._consumables] = await Promise.all([
-      this._apiService
-        .get<WeaponDto[]>('/data/weapons.json')
-        .then((weaponDtos) => weaponDtos.map((x) => new WeaponLoadout(x))),
+    [this._tools, this._consumables, this._customAmmo] = await Promise.all([
       this._apiService
         .get<ToolDto[]>('/data/tools.json')
-        .then((weaponDtos) => weaponDtos.map((x) => new ToolLoadout(x))),
+        .then((dtos) => dtos.map((x) => new ToolLoadout(x))),
       this._apiService
         .get<ConsumableDto[]>('/data/consumables.json')
-        .then((weaponDtos) => weaponDtos.map((x) => new ConsumableLoadout(x))),
+        .then((dtos) => dtos.map((x) => new ConsumableLoadout(x))),
+      this._apiService
+        .get<CustomAmmoDto[]>('/data/custom-ammo.json')
+        .then((dtos) => dtos.map((x) => new CustomAmmoLoadout(x))),
     ]);
+
+    this._weapons = await this._apiService
+      .get<WeaponDto[]>('/data/weapons.json')
+      .then((weaponDtos) =>
+        weaponDtos.map((x) => new WeaponLoadout(x, this._customAmmo))
+      );
+
     this.randomize();
   }
 }

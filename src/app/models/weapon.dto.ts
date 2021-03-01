@@ -3,4 +3,6 @@ export interface WeaponDto {
   ammoTypes: number[];
   slots: number;
   price: number;
+  customAmmo?: number[];
+  maxCustomAmmo?: number;
 }
