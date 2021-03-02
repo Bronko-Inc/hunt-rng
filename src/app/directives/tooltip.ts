@@ -14,7 +14,6 @@ export class TooltipDirective {
   private readonly _renderer: Renderer2;
   private readonly _el: ElementRef<any>;
   private _tooltip?: HTMLSpanElement;
-  private _hideTimeout?: number;
 
   @Input('tooltip') tooltipTitle: string = '';
 
@@ -37,9 +36,7 @@ export class TooltipDirective {
 
   private show() {
     this.shown = true;
-    if (this._hideTimeout) {
-      clearTimeout(this._hideTimeout);
-    }
+
     this._tooltip = this._renderer.createElement('span');
     this._tooltip!.innerText = this.tooltipTitle;
     this._tooltip!.classList.add('tooltip');
