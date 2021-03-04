@@ -10,6 +10,7 @@
           <div class="item-container">
             <div class="item-ammo-container">
               <div class="img-container" [tooltip]="weapon.name">
+                <img class="item-image" [src]="weapon.imagePath">
                 <img *ngIf="weapon.slots === 3" src="assets/img/backdrops/3-slot.png">
                 <img *ngIf="weapon.slots === 2" src="assets/img/backdrops/2-slot.png">
                 <img *ngIf="weapon.slots === 1" src="assets/img/backdrops/1-slot.png">
@@ -29,19 +30,25 @@
       </div>
       <div class="main-column-container" *ngIf="randomTools.length">
         <div class="row">
-          <div *ngFor="let tool of randomTools" class="column" [tooltip]="tool.name">
+          <div *ngFor="let tool of randomTools" class="column">
             <div class="item-container">
-              <img src="assets/img/backdrops/item.png">
-              <span class="price-tag">${{tool.price}}</span>
+              <div class="img-container" [tooltip]="tool.name">
+                <img class="item-image" [src]="tool.imagePath">
+                <img src="assets/img/backdrops/item.png">
+                <span class="price-tag">${{tool.price}}</span>
+              </div>
             </div>
           </div>
         </div>
         <span>Tools</span>
         <div class="row">
-          <div *ngFor="let consumable of randomConsumables" class="column" [tooltip]="consumable.name">
+          <div *ngFor="let consumable of randomConsumables" class="column">
             <div class="item-container">
-              <img src="assets/img/backdrops/item.png">
-              <span class="price-tag">${{consumable.price}}</span>
+              <div class="img-container" [tooltip]="consumable.name">
+                <img class="item-image" [src]="consumable.imagePath">
+                <img src="assets/img/backdrops/item.png">
+                <span class="price-tag">${{consumable.price}}</span>
+              </div>
             </div>
           </div>
         </div>

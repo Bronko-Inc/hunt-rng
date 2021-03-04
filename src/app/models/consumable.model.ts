@@ -10,7 +10,7 @@ export class ConsumableLoadout {
     this.imagePath = `data/img/consumables/${dto.name.replace(
       /[\s\W]/g,
       '_'
-    )}.png`;
+    )}.png`.toLowerCase();
     this.price = dto.price;
   }
 }

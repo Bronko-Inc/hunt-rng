@@ -14,7 +14,10 @@ export class WeaponLoadout {
   constructor(dto: WeaponDto, customAmmoList: CustomAmmoLoadout[]) {
     this.name = dto.name;
     this.slots = dto.slots;
-    this.imagePath = `data/img/weapons/${dto.name.replace(/[\s\W]/g, '_')}.png`;
+    this.imagePath = `data/img/weapons/${dto.name.replace(
+      /[\s\W]/g,
+      '_'
+    )}.png`.toLowerCase();
     this.ammoTypes = dto.ammoTypes;
     this.price = dto.price;
     this.customAmmo = customAmmoList.filter((x) =>

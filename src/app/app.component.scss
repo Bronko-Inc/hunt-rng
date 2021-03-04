@@ -57,17 +57,25 @@
             height: 166px;
             position: relative;
             width: fit-content;
+            .img-container {
+              position: relative;
+              height: 166px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .item-image {
+                position: absolute;
+                max-height: 95%;
+                max-width: 95%;
+              }
+            }
+            .ammo-container {
+              background-color: magenta;
+              height: 166px;
+              width: 70px;
+            }
             .item-ammo-container {
               display: flex;
-              .img-container {
-                position: relative;
-                height: 166px;
-              }
-              .ammo-container {
-                background-color: magenta;
-                height: 166px;
-                width: 70px;
-              }
             }
             .price-tag {
               position: absolute;

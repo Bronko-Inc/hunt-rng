@@ -9,10 +9,10 @@ export class ToolLoadout {
   constructor(dto: ToolDto) {
     this.name = dto.name;
     this.knifeAndHeal = dto.knifeAndHeal;
-    this.imagePath = `data/img/consumables/${dto.name.replace(
+    this.imagePath = `data/img/tools/${dto.name.replace(
       /[\s\W]/g,
       '_'
-    )}.png`;
+    )}.png`.toLowerCase();
     this.price = dto.price;
   }
 }
