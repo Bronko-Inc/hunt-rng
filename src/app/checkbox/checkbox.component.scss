@@ -1,0 +1,15 @@
+input {
+  position: absolute;
+  top: -9999px;
+}
+
+.checkbox-container {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  img {
+    position: absolute;
+  }
+}
