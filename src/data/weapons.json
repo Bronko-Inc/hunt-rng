@@ -131,7 +131,8 @@
     "slots": 1,
     "price": 95,
     "maxCustomAmmo": 2,
-    "customAmmo": [13, 14, 37, 38, 39]
+    "customAmmo": [13, 14, 37, 38, 39],
+    "akimbo": true
   },
   {
     "name": "Bornheim No. 3",
