@@ -158,81 +158,46 @@
   },
   {
     "id": 32,
-    "name": "Romero 77 Starshell Ammo",
+    "name": "Shotgun Starshell Ammo",
     "price": 10
   },
   {
     "id": 33,
-    "name": "Romero 77 Dragon Breath Ammo",
+    "name": "Shotgun Dragon Breath Ammo",
     "price": 50
   },
   {
     "id": 34,
-    "name": "Romero 77 Penny Shot Ammo",
+    "name": "Shotgun Penny Shot Ammo",
     "price": 25
   },
   {
     "id": 35,
-    "name": "Romero 77 Slug Ammo",
+    "name": "Shotgun Slug Ammo",
     "price": 150
   },
   {
     "id": 36,
-    "name": "Caldwell Rival 78 Flechette Ammo",
+    "name": "Shotgun Flechette Ammo",
     "price": 45
   },
   {
     "id": 37,
-    "name": "Caldwell Rival 78 Slug Ammo",
-    "price": 150
+    "name": "Shotgun Starshell Ammo",
+    "price": 10,
+    "blocklist": [38, 39]
   },
   {
     "id": 38,
-    "name": "Specter 1882 Flechette Ammo",
-    "price": 45
+    "name": "Shotgun Dragon Breath Ammo",
+    "price": 50,
+    "blocklist": [37, 39]
   },
   {
     "id": 39,
-    "name": "Specter 1882 Dragon Breath Ammo",
-    "price": 50
-  },
-  {
-    "id": 40,
-    "name": "Specter 1882 Slug Ammo",
-    "price": 150
-  },
-  {
-    "id": 41,
-    "name": "LeMat Mark II Starshell Ammo",
-    "price": 10,
-    "blocklist": [42, 43]
-  },
-  {
-    "id": 42,
-    "name": "LeMat Mark II Dragon Breath Ammo",
-    "price": 50,
-    "blocklist": [41, 43]
-  },
-  {
-    "id": 43,
-    "name": "LeMat Mark II Slug Ammo",
+    "name": "Shotgun Slug Ammo",
     "price": 150,
-    "blocklist": [41, 42]
-  },
-  {
-    "id": 44,
-    "name": "Winfield 1887 Terminus Flechette Ammo",
-    "price": 45
-  },
-  {
-    "id": 45,
-    "name": "Winfield 1887 Terminus Penny Shot Ammo",
-    "price": 25
-  },
-  {
-    "id": 46,
-    "name": "Crown & King Auto-5 Penny Shot Ammo",
-    "price": 25
+    "blocklist": [37, 38]
   },
   {
     "id": 47,
