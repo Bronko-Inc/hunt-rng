@@ -13,3 +13,12 @@ input {
     position: absolute;
   }
 }
+
+:host {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  padding-left: 10px;
+}
