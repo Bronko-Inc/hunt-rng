@@ -21,7 +21,7 @@ export const AKIMBO_RATIO = 0.5;
 export class AppComponent implements OnInit {
   private readonly _apiService: ApiService;
   public includeCustomAmmo: boolean = true;
-  public maxSlotCount: number = 4;
+  public quarterMaster: boolean = true;
   public two = [0, 1];
 
   private _weapons: WeaponLoadout[] = [];
@@ -42,6 +42,10 @@ export class AppComponent implements OnInit {
     this._apiService = apiService;
   }
 
+  private get maxSlotCount(): number {
+    return this.quarterMaster ? 5 : 4;
+  }
+
   private randomFromArray<T>(arr: T[], blockList?: T[]): T {
     const filteredArr = arr.filter(
       (x) => !blockList || blockList?.indexOf(x) === -1
@@ -52,7 +56,17 @@ export class AppComponent implements OnInit {
   }
 
   public randomize() {
-    const firstWeapon = this.randomFromArray(this._weapons);
+    let randomSlotCount = 0;
+    this.randomWeapons = [];
+
+    let firstWeapon: WeaponLoadout;
+    if (this.quarterMaster) {
+      firstWeapon = this.randomFromArray(
+        this._weapons.filter((x) => x.slots === 3)
+      );
+    } else {
+      firstWeapon = this.randomFromArray(this._weapons);
+    }
     const secondWeapon = this.randomFromArray(
       this._weapons.filter(
         (x) => x.slots + firstWeapon.slots <= this.maxSlotCount
@@ -60,9 +74,16 @@ export class AppComponent implements OnInit {
       [firstWeapon]
     );
 
+    this.randomWeapons = [firstWeapon, secondWeapon].sort(
+      (a, b) => b.slots - a.slots
+    );
+
+    randomSlotCount = this.randomWeapons
+      .map((x) => x.slots)
+      .reduce((a, b) => a + b);
+
     this.randomTools = [];
     this.randomConsumables = [];
-
     for (let i = 0; i < 4; i++) {
       this.randomTools.push(
         this.randomFromArray(this._tools, this.randomTools)
@@ -72,26 +93,22 @@ export class AppComponent implements OnInit {
       );
     }
 
-    this.randomWeapons = [firstWeapon, secondWeapon].sort(
-      (a, b) => b.slots - a.slots
-    );
-
-    const randomSlotCount = this.randomWeapons
-      .map((x) => x.slots)
-      .reduce((a, b) => a + b);
-
     this.randomAkimbo = [false, false];
 
-    for (let i = 0; i < 1; i++) {
-      //todo: add random
-      if (
-        randomSlotCount <
-        this.maxSlotCount + this.randomAkimbo.filter((x) => x).length
-      ) {
-        if (this.randomWeapons[i].akimbo) {
-          this.randomAkimbo[i] = true;
+    for (let i = 0; i <= 1; i++) {
+      if (Math.random() < AKIMBO_RATIO) {
+        if (randomSlotCount < this.maxSlotCount) {
+          if (this.randomWeapons[i].akimbo) {
+            this.randomAkimbo[i] = true;
+            randomSlotCount++;
+          }
         }
       }
+    }
+
+    if (this.quarterMaster && randomSlotCount < this.maxSlotCount) {
+      this.randomize();
+      return;
     }
 
     this.randomCustomAmmo = [[], []];
