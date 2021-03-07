@@ -140,7 +140,8 @@
     "slots": 1,
     "price": 201,
     "maxCustomAmmo": 1,
-    "customAmmo": [11, 12]
+    "customAmmo": [11, 12],
+    "akimbo": true
   },
   {
     "name": "Bornheim No. 3 Extended",
@@ -148,7 +149,8 @@
     "slots": 1,
     "price": 306,
     "maxCustomAmmo": 1,
-    "customAmmo": [11, 12]
+    "customAmmo": [11, 12],
+    "akimbo": true
   },
   {
     "name": "Caldwell Conversion Chain Pistol",
@@ -156,7 +158,8 @@
     "slots": 1,
     "price": 50,
     "maxCustomAmmo": 1,
-    "customAmmo": [9, 10]
+    "customAmmo": [9, 10],
+    "akimbo": true
   },
   {
     "name": "Caldwell Conversion Pistol",
@@ -164,7 +167,8 @@
     "slots": 1,
     "price": 26,
     "maxCustomAmmo": 1,
-    "customAmmo": [9, 10]
+    "customAmmo": [9, 10],
+    "akimbo": true
   },
   {
     "name": "Nagant M1895",
@@ -172,7 +176,8 @@
     "slots": 1,
     "price": 24,
     "maxCustomAmmo": 1,
-    "customAmmo": [1, 2]
+    "customAmmo": [1, 2],
+    "akimbo": true
   },
   {
     "name": "Nagant M1895 Officer",
@@ -180,7 +185,8 @@
     "slots": 1,
     "price": 66,
     "maxCustomAmmo": 1,
-    "customAmmo": [5, 6]
+    "customAmmo": [5, 6],
+    "akimbo": true
   },
   {
     "name": "Nagant M1895 Officer Brawler",
@@ -188,7 +194,8 @@
     "slots": 1,
     "price": 80,
     "maxCustomAmmo": 1,
-    "customAmmo": [5, 6]
+    "customAmmo": [5, 6],
+    "akimbo": true
   },
   {
     "name": "Nagant M1895 Silencer",
@@ -196,7 +203,8 @@
     "slots": 1,
     "price": 53,
     "maxCustomAmmo": 1,
-    "customAmmo": [1, 2]
+    "customAmmo": [1, 2],
+    "akimbo": true
   },
   {
     "name": "Winfield M1876 Centennial",
@@ -276,7 +284,8 @@
     "slots": 1,
     "price": 100,
     "maxCustomAmmo": 1,
-    "customAmmo": [19, 47]
+    "customAmmo": [19, 47],
+    "akimbo": true
   },
   {
     "name": "Caldwell Pax Claw",
@@ -284,7 +293,8 @@
     "slots": 1,
     "price": 125,
     "maxCustomAmmo": 1,
-    "customAmmo": [19, 47]
+    "customAmmo": [19, 47],
+    "akimbo": true
   },
   {
     "name": "Lebel 1886",
@@ -428,7 +438,8 @@
     "slots": 1,
     "price": 275,
     "maxCustomAmmo": 1,
-    "customAmmo": [25]
+    "customAmmo": [25],
+    "akimbo": true
   },
   {
     "name": "Winfield 1887 Terminus",
@@ -566,7 +577,8 @@
     "name": "Dolch 96",
     "ammoTypes": [6],
     "slots": 1,
-    "price": 750
+    "price": 750,
+    "akimbo": true
   },
   {
     "name": "Combat Axe",
