@@ -80,7 +80,8 @@
 
     <div id="settings-area">
       <hunt-ckeck name="a"
-                  text="test"></hunt-ckeck>
+                  text="Quartermaster"
+                  [(ngModel)]="quarterMaster"></hunt-ckeck>
     </div>
   </div>
 </div>
@@ -93,4 +94,6 @@
   <img src="assets/img/backdrops/text-bg1.png">
   <img src="assets/img/backdrops/text-bg2.png">
   <img src="assets/img/backdrops/text-bg3.png">
+  <img *ngFor="let i of preloadImageLinks"
+       [src]="i">
 </div>
