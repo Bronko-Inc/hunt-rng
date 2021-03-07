@@ -5,4 +5,5 @@ export interface WeaponDto {
   price: number;
   customAmmo?: number[];
   maxCustomAmmo?: number;
+  akimbo?: boolean;
 }

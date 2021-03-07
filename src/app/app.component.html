@@ -12,18 +12,21 @@
              class="column">
           <div class="item-container">
             <div class="item-ammo-container">
-              <div class="img-container"
-                   [tooltip]="weapon.name">
-                <img class="item-image"
-                     [src]="weapon.imagePath">
-                <img *ngIf="weapon.slots === 3"
-                     src="assets/img/backdrops/3-slot.png">
-                <img *ngIf="weapon.slots === 2"
-                     src="assets/img/backdrops/2-slot.png">
-                <img *ngIf="weapon.slots === 1"
-                     src="assets/img/backdrops/1-slot.png">
-                <span class="price-tag">${{weapon.price}}</span>
-              </div>
+              <ng-container *ngFor="let j of two">
+                <div *ngIf="j === 0 || randomAkimbo[i]"
+                     class="img-container"
+                     [tooltip]="weapon.name">
+                  <img class="item-image"
+                       [src]="weapon.imagePath">
+                  <img *ngIf="weapon.slots === 3"
+                       src="assets/img/backdrops/3-slot.png">
+                  <img *ngIf="weapon.slots === 2"
+                       src="assets/img/backdrops/2-slot.png">
+                  <img *ngIf="weapon.slots === 1"
+                       src="assets/img/backdrops/1-slot.png">
+                  <span class="price-tag">${{weapon.price}}</span>
+                </div>
+              </ng-container>
               <ng-container *ngFor="let ammo of randomCustomAmmo[i]">
                 <div class="ammo-container img-container"
                      *ngIf="ammo"

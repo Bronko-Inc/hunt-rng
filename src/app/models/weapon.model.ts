@@ -10,6 +10,7 @@ export class WeaponLoadout {
   price: number;
   customAmmo: CustomAmmoLoadout[];
   maxCustomAmmo: number;
+  akimbo: boolean;
 
   constructor(dto: WeaponDto, customAmmoList: CustomAmmoLoadout[]) {
     this.name = dto.name;
@@ -24,5 +25,6 @@ export class WeaponLoadout {
       dto.customAmmo?.includes(x.id)
     );
     this.maxCustomAmmo = dto.maxCustomAmmo ?? 0;
+    this.akimbo = dto.akimbo ?? false;
   }
 }

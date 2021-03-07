@@ -11,6 +11,7 @@ import { ApiService } from './services/api.service';
 
 export const CUSTOM_AMMO_RATIO = 0.5;
 export const CUSTOM_AMMO_MULTIPLE_RATIO = 0.25;
+export const AKIMBO_RATIO = 0.5;
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit {
   private readonly _apiService: ApiService;
   public includeCustomAmmo: boolean = true;
   public maxSlotCount: number = 4;
+  public two = [0, 1];
 
   private _weapons: WeaponLoadout[] = [];
   private _tools: ToolLoadout[] = [];
@@ -34,6 +36,7 @@ export class AppComponent implements OnInit {
     [],
     [],
   ];
+  public randomAkimbo: boolean[] = [false, false];
 
   constructor(apiService: ApiService) {
     this._apiService = apiService;
@@ -77,7 +80,18 @@ export class AppComponent implements OnInit {
       .map((x) => x.slots)
       .reduce((a, b) => a + b);
 
-    if (randomSlotCount < this.maxSlotCount) {
+    this.randomAkimbo = [false, false];
+
+    for (let i = 0; i < 1; i++) {
+      //todo: add random
+      if (
+        randomSlotCount <
+        this.maxSlotCount + this.randomAkimbo.filter((x) => x).length
+      ) {
+        if (this.randomWeapons[i].akimbo) {
+          this.randomAkimbo[i] = true;
+        }
+      }
     }
 
     this.randomCustomAmmo = [[], []];
