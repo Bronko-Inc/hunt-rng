@@ -42,6 +42,15 @@ export class AppComponent implements OnInit {
     this._apiService = apiService;
   }
 
+  public get preloadImageLinks(): string[] {
+    return [
+      ...this._weapons.map((x) => x.imagePath),
+      ...this._tools.map((x) => x.imagePath),
+      ...this._consumables.map((x) => x.imagePath),
+      ...this._customAmmo.map((x) => x.imagePath),
+    ];
+  }
+
   private get maxSlotCount(): number {
     return this.quarterMaster ? 5 : 4;
   }
