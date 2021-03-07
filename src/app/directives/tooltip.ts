@@ -56,7 +56,17 @@ export class TooltipDirective {
       0;
 
     const top = hostPos.top - tooltipPos.height - 10;
-    const left = hostPos.left + (hostPos.width - tooltipPos.width) / 2;
+    let left = hostPos.left + (hostPos.width - tooltipPos.width) / 2;
+
+    const tooRight =
+      this._tooltip?.clientWidth! + 75 + left - document.body.clientWidth;
+    if (tooRight > 0) {
+      left -= tooRight;
+    }
+
+    if (left < 75) {
+      left = 75;
+    }
 
     this._renderer.setStyle(this._tooltip, 'top', `${top + scrollPos}px`);
     this._renderer.setStyle(this._tooltip, 'left', `${left}px`);
