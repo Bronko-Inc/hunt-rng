@@ -28,7 +28,9 @@
                 <div class="ammo-container img-container"
                      *ngIf="ammo"
                      [tooltip]="ammo.name">
-                  <img [src]="ammo.imagePath">
+                  <img [src]="ammo.imagePath"
+                       class="item-image">
+                  <img src="assets/img/backdrops/ammo.png">
                   <span class="price-tag">${{ammo.price}}</span>
                 </div>
               </ng-container>
