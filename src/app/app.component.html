@@ -5,7 +5,6 @@
     <h1>Loadout randomizer</h1>
     <button (click)="randomize()"
             id="btn-randomize">Randomize</button>
-
     <div id="loadout-container">
       <div class="main-column-container">
         <div *ngFor="let weapon of randomWeapons; let i = index"
@@ -77,6 +76,11 @@
         </div>
         <span>Consumables</span>
       </div>
+    </div>
+
+    <div id="settings-area">
+      <hunt-ckeck name="a"
+                  text="test"></hunt-ckeck>
     </div>
   </div>
 </div>
