@@ -20,6 +20,7 @@ export const CUSTOM_AMMO_MULTIPLE_RATIO = 0.25;
 export class AppComponent implements OnInit {
   private readonly _apiService: ApiService;
   public includeCustomAmmo: boolean = true;
+  public maxSlotCount: number = 4;
 
   private _weapons: WeaponLoadout[] = [];
   private _tools: ToolLoadout[] = [];
@@ -50,7 +51,9 @@ export class AppComponent implements OnInit {
   public randomize() {
     const firstWeapon = this.randomFromArray(this._weapons);
     const secondWeapon = this.randomFromArray(
-      this._weapons.filter((x) => x.slots + firstWeapon.slots <= 4),
+      this._weapons.filter(
+        (x) => x.slots + firstWeapon.slots <= this.maxSlotCount
+      ),
       [firstWeapon]
     );
 
@@ -69,6 +72,13 @@ export class AppComponent implements OnInit {
     this.randomWeapons = [firstWeapon, secondWeapon].sort(
       (a, b) => b.slots - a.slots
     );
+
+    const randomSlotCount = this.randomWeapons
+      .map((x) => x.slots)
+      .reduce((a, b) => a + b);
+
+    if (randomSlotCount < this.maxSlotCount) {
+    }
 
     this.randomCustomAmmo = [[], []];
 
