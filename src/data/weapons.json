@@ -254,7 +254,7 @@
     "customAmmo": [15, 16]
   },
   {
-    "name": "Springfield 1866 Deadeye",
+    "name": "Springfield 1866 Compact Deadeye",
     "ammoTypes": [2],
     "slots": 2,
     "price": 46,
@@ -262,7 +262,7 @@
     "customAmmo": [15, 16]
   },
   {
-    "name": "Springfield 1866 Striker",
+    "name": "Springfield 1866 Compact Striker",
     "ammoTypes": [2],
     "slots": 2,
     "price": 56,
@@ -510,7 +510,7 @@
     "customAmmo": [32, 33, 34, 35]
   },
   {
-    "name": "Romero 77 Handcannon Hatchet",
+    "name": "Romero 77 Hatchet",
     "ammoTypes": [4],
     "slots": 2,
     "price": 62,
