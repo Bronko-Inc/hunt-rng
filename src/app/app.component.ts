@@ -21,7 +21,7 @@ export const AKIMBO_RATIO = 0.5;
 export class AppComponent implements OnInit {
   private readonly _apiService: ApiService;
   public includeCustomAmmo: boolean = true;
-  public quarterMaster: boolean = true;
+  public quarterMaster: boolean = false;
   public two = [0, 1];
 
   private _weapons: WeaponLoadout[] = [];
