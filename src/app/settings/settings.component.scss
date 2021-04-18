@@ -1,0 +1,34 @@
+#settings-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #settings-container {
+    height: 75%;
+    width: 75%;
+    background-color: #1a1a1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    #settings-area {
+      display: flex;
+      .settings-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    #settings-actions {
+      display: flex;
+      gap: 50px;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

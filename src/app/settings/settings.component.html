@@ -1,0 +1,24 @@
+<div id="settings-bg">
+  <div id="settings-container"
+       *ngIf="settings">
+    <div id="settings-area">
+
+      <div class="settings-column">
+        <hunt-ckeck name="quartermaster"
+                    text="Quartermaster"
+                    [(ngModel)]="settings.quarterMaster"></hunt-ckeck>
+        <hunt-ckeck name="includeCustomAmmo"
+                    text="Include Custom Ammo"
+                    [(ngModel)]="settings.includeCustomAmmo"></hunt-ckeck>
+      </div>
+      <div class="settings-column">
+      </div>
+      <div class="settings-column">
+      </div>
+    </div>
+    <div id="settings-actions">
+      <button (click)="discard()">Discard</button>
+      <button (click)="save()">Save</button>
+    </div>
+  </div>
+</div>
