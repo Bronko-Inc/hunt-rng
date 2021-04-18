@@ -42,12 +42,8 @@
         outline: none;
         font-size: 48px;
         margin: 0;
-        &.r {
-          padding: 0 28px 0 15px;
-        }
-        &.l {
-          padding: 0 15px 0 28px;
-        }
+        line-height: 100px;
+        padding: 0 20px;
         cursor: pointer;
         transition: background-color linear 100ms;
         display: flex;
