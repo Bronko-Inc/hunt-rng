@@ -1,0 +1,26 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: YarnInstaller@3
+  inputs:
+    versionSpec: '1.x'
+- task: Yarn@3
+  inputs:
+    projectDirectory: '/'
+    arguments: install
+
+- task: Yarn@3
+  inputs:
+    projectDirectory: '/'
+    arguments: run build-prod
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)/dist/hunt-loadout-randomizer'
+    ArtifactName: 'hunt-rng'
+    publishLocation: 'Container'
