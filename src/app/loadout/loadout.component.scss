@@ -1,8 +1,11 @@
-#loadout-container {
+:host {
   margin-top: 50px;
+  overflow: auto;
+}
+
+#loadout-container {
   display: flex;
   justify-content: space-between;
-  overflow: auto;
   gap: 20px;
 
   .main-column-container {
