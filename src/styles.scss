@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  --tooltipFontSize: 20px;
+  --tooltipPadding: 2px;
 }
 
 * {
@@ -36,9 +38,6 @@ button:not(.unstyled) {
   }
 }
 
-$fontSize: 20px;
-$padding: 2px;
-
 .tooltip {
   background: url("assets/img/backdrops/text-bg2.png");
   background-clip: border-box;
@@ -47,8 +46,8 @@ $padding: 2px;
   position: absolute;
   opacity: 0;
   transition: opacity 250ms;
-  padding: $padding 0;
-  font-size: $fontSize;
+  padding: var(--tooltipPadding) 0;
+  font-size: var(--tooltipFontSize);
   &.visible {
     opacity: 1;
   }
@@ -58,15 +57,15 @@ $padding: 2px;
     background-size: cover;
     position: absolute;
     top: 0;
-    width: calc(#{$fontSize} * 2.6 + 2 * #{$padding});
-    height: calc(#{$fontSize} * 2.6 + 2 * #{$padding});
+    width: calc(var(--tooltipFontSize) * 2.6 + 2 * var(--tooltipPadding));
+    height: calc(var(--tooltipFontSize) * 2.6 + 2 * var(--tooltipPadding));
   }
   &::before {
     background-image: url("assets/img/backdrops/text-bg1.png");
-    left: calc(-2.6 * #{$fontSize} - 2 * #{$padding});
+    left: calc(-2.6 * var(--tooltipFontSize) - 2 * var(--tooltipPadding));
   }
   &::after {
     background-image: url("assets/img/backdrops/text-bg3.png");
-    right: calc(- 2.6 * #{$fontSize} - 2 * #{$padding});
+    right: calc(- 2.6 * var(--tooltipFontSize) - 2 * var(--tooltipPadding));
   }
 }

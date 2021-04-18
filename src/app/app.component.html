@@ -2,7 +2,6 @@
   <div id="main-card">
     <img id="main-logo"
          src="assets/img/logo.png">
-    <h1>Loadout randomizer</h1>
     <div id="randomize-button">
       <button class="unstyled"
               (click)="randomize()">
@@ -19,6 +18,12 @@
                  [randomWeapons]="randomWeapons">
 
     </app-loadout>
+    <div id="main-price">
+      <span id="main-price-span"
+            class="tooltip visible">
+        Total: ${{totalPrice}}
+      </span>
+    </div>
   </div>
 </div>
 

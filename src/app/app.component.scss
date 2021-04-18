@@ -9,7 +9,7 @@
   #main-card {
     align-self: center;
     padding-top: 35px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     box-sizing: border-box;
     width: 80%;
     @media only screen and (max-width: 1650px) {
@@ -21,8 +21,8 @@
     display: flex;
     flex-direction: column;
 
-    #main-logo,
-    h1 {
+    #main-logo {
+      justify-self: flex-start;
       align-self: center;
     }
 
@@ -58,6 +58,17 @@
         img {
           height: 64px;
         }
+      }
+    }
+    #main-price {
+      position: relative;
+      align-self: center;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      #main-price-span {
+        --tooltipFontSize: 32px;
       }
     }
   }

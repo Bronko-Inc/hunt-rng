@@ -42,6 +42,7 @@ export class AppComponent implements OnInit {
     [],
     [],
   ];
+  public totalPrice: number = 0;
 
   constructor(apiService: ApiService) {
     this._apiService = apiService;
@@ -79,6 +80,7 @@ export class AppComponent implements OnInit {
   }
 
   public randomize() {
+    this.totalPrice = 0;
     let randomSlotCount = 0;
     this.randomWeapons = [];
 
@@ -95,7 +97,6 @@ export class AppComponent implements OnInit {
     }
 
     const firstWeapon = this.randomFromArray(weaponPool1);
-
     const secondWeapon = this.randomFromArray(
       this._weapons.filter(
         (x) => x.slots + firstWeapon.slots <= this.maxSlotCount
@@ -155,6 +156,13 @@ export class AppComponent implements OnInit {
         }
       }
     }
+
+    this.randomTools.forEach((x) => (this.totalPrice += x.price));
+    this.randomConsumables.forEach((x) => (this.totalPrice += x.price));
+    this.randomWeapons.forEach((x) => (this.totalPrice += x.price));
+    this.randomCustomAmmo.forEach((x) =>
+      x.forEach((y) => (this.totalPrice += y.price))
+    );
   }
 
   async ngOnInit(): Promise<void> {
