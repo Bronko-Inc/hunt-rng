@@ -5,56 +5,12 @@
     <h1>Loadout randomizer</h1>
     <button (click)="randomize()"
             id="btn-randomize">Randomize</button>
-    <div id="loadout-container">
-      <div class="main-column-container">
-        <div *ngFor="let weapon of randomWeapons; let i = index"
-             class="column">
-          <div class="item-container">
-            <div class="item-ammo-container">
-              <app-box [itemType]="weapon.itemType"
-                       [imgPath]="weapon.imagePath"
-                       [tooltip]="weapon.name"
-                       [price]="weapon.price"></app-box>
-              <ng-container *ngFor="let ammo of randomCustomAmmo[i]">
-                <app-box *ngIf="ammo"
-                         [itemType]="ItemType.AMMO"
-                         [imgPath]="ammo.imagePath"
-                         [tooltip]="ammo.name"
-                         [price]="ammo.price"></app-box>
-              </ng-container>
-            </div>
-          </div>
-          <span *ngIf="weapon.slots === 3">Large slot</span>
-          <span *ngIf="weapon.slots === 2">Medium slot</span>
-          <span *ngIf="weapon.slots === 1">Small slot</span>
-        </div>
-      </div>
-      <div class="main-column-container"
-           *ngIf="randomTools.length">
-        <div class="row">
-          <div *ngFor="let tool of randomTools"
-               class="column">
-            <app-box [imgPath]="tool.imagePath"
-                     [itemType]="ItemType.ITEM"
-                     [tooltip]="tool.name"
-                     [price]="tool.price">
-            </app-box>
-          </div>
-        </div>
-        <span>Tools</span>
-        <div class="row">
-          <div *ngFor="let consumable of randomConsumables"
-               class="column">
-            <app-box [imgPath]="consumable.imagePath"
-                     [itemType]="ItemType.ITEM"
-                     [tooltip]="consumable.name"
-                     [price]="consumable.price">
-            </app-box>
-          </div>
-        </div>
-        <span>Consumables</span>
-      </div>
-    </div>
+    <app-loadout [randomConsumables]="randomConsumables"
+                 [randomCustomAmmo]="randomCustomAmmo"
+                 [randomTools]="randomTools"
+                 [randomWeapons]="randomWeapons">
+
+    </app-loadout>
 
     <div id="settings-area">
       <hunt-ckeck name="quartermaster"

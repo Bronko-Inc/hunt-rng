@@ -9,7 +9,6 @@ import { ItemType } from '../models/item-type.model';
 export class BoxComponent implements OnInit {
   ItemType = ItemType;
   @Input() itemType: ItemType = ItemType.UNKNOWN;
-  @Input() tooltip: string = '';
   @Input() imgPath: string = '';
   @Input() price: number = 0;
 
