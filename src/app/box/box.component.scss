@@ -1,0 +1,26 @@
+.box-container {
+  position: relative;
+  height: 166px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .item-image {
+    position: absolute;
+    max-height: 90%;
+    max-width: 80%;
+  }
+}
+.ammo-container {
+  height: 166px;
+  width: 70px;
+}
+.item-ammo-container {
+  display: flex;
+  gap: 7px;
+}
+.price-tag {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  margin: 0;
+}

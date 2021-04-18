@@ -3,6 +3,7 @@ import { ConsumableDto } from './models/consumable.dto';
 import { ConsumableLoadout } from './models/consumable.model';
 import { CustomAmmoDto } from './models/custom-ammo.dto';
 import { CustomAmmoLoadout } from './models/custom-ammo.model';
+import { ItemType } from './models/item-type.model';
 import { ToolDto } from './models/tool.dto';
 import { ToolLoadout } from './models/tool.model';
 import { WeaponDto } from './models/weapon.dto';
@@ -19,6 +20,7 @@ export const AKIMBO_RATIO = 0.5;
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  public ItemType = ItemType;
   private readonly _apiService: ApiService;
   public includeCustomAmmo: boolean = true;
   public quarterMaster: boolean = false;

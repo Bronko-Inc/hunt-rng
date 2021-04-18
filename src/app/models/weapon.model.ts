@@ -1,5 +1,6 @@
 import { AmmoType } from './ammo-type';
 import { CustomAmmoLoadout } from './custom-ammo.model';
+import { ItemType } from './item-type.model';
 import { WeaponDto } from './weapon.dto';
 
 export class WeaponLoadout {
@@ -26,5 +27,18 @@ export class WeaponLoadout {
     );
     this.maxCustomAmmo = dto.maxCustomAmmo ?? 0;
     this.akimbo = dto.akimbo ?? false;
+  }
+
+  public get itemType(): ItemType {
+    switch (this.slots) {
+      case 1:
+        return ItemType.WEAPON_1;
+      case 2:
+        return ItemType.WEAPON_2;
+      case 3:
+        return ItemType.WEAPON_3;
+      default:
+        return ItemType.UNKNOWN;
+    }
   }
 }

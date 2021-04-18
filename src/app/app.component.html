@@ -11,30 +11,16 @@
              class="column">
           <div class="item-container">
             <div class="item-ammo-container">
-              <ng-container *ngFor="let j of two">
-                <div *ngIf="j === 0 || randomAkimbo[i]"
-                     class="img-container"
-                     [tooltip]="weapon.name">
-                  <img class="item-image"
-                       [src]="weapon.imagePath">
-                  <img *ngIf="weapon.slots === 3"
-                       src="assets/img/backdrops/3-slot.png">
-                  <img *ngIf="weapon.slots === 2"
-                       src="assets/img/backdrops/2-slot.png">
-                  <img *ngIf="weapon.slots === 1"
-                       src="assets/img/backdrops/1-slot.png">
-                  <span class="price-tag">${{weapon.price}}</span>
-                </div>
-              </ng-container>
+              <app-box [itemType]="weapon.itemType"
+                       [imgPath]="weapon.imagePath"
+                       [tooltip]="weapon.name"
+                       [price]="weapon.price"></app-box>
               <ng-container *ngFor="let ammo of randomCustomAmmo[i]">
-                <div class="ammo-container img-container"
-                     *ngIf="ammo"
-                     [tooltip]="ammo.name">
-                  <img [src]="ammo.imagePath"
-                       class="item-image">
-                  <img src="assets/img/backdrops/ammo.png">
-                  <span class="price-tag">${{ammo.price}}</span>
-                </div>
+                <app-box *ngIf="ammo"
+                         [itemType]="ItemType.AMMO"
+                         [imgPath]="ammo.imagePath"
+                         [tooltip]="ammo.name"
+                         [price]="ammo.price"></app-box>
               </ng-container>
             </div>
           </div>
@@ -48,30 +34,22 @@
         <div class="row">
           <div *ngFor="let tool of randomTools"
                class="column">
-            <div class="item-container">
-              <div class="img-container"
-                   [tooltip]="tool.name">
-                <img class="item-image"
-                     [src]="tool.imagePath">
-                <img src="assets/img/backdrops/item.png">
-                <span class="price-tag">${{tool.price}}</span>
-              </div>
-            </div>
+            <app-box [imgPath]="tool.imagePath"
+                     [itemType]="ItemType.ITEM"
+                     [tooltip]="tool.name"
+                     [price]="tool.price">
+            </app-box>
           </div>
         </div>
         <span>Tools</span>
         <div class="row">
           <div *ngFor="let consumable of randomConsumables"
                class="column">
-            <div class="item-container">
-              <div class="img-container"
-                   [tooltip]="consumable.name">
-                <img class="item-image"
-                     [src]="consumable.imagePath">
-                <img src="assets/img/backdrops/item.png">
-                <span class="price-tag">${{consumable.price}}</span>
-              </div>
-            </div>
+            <app-box [imgPath]="consumable.imagePath"
+                     [itemType]="ItemType.ITEM"
+                     [tooltip]="consumable.name"
+                     [price]="consumable.price">
+            </app-box>
           </div>
         </div>
         <span>Consumables</span>

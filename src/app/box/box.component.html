@@ -1,0 +1,8 @@
+<div class="box-container"
+     [class.ammo-container]="itemType === ItemType.AMMO"
+     [tooltip]="tooltip">
+  <img class="item-image"
+       [src]="imgPath">
+  <img [src]="backdropImgPath">
+  <span class="price-tag">${{price}}</span>
+</div>
