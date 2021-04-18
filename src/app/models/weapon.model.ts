@@ -13,20 +13,34 @@ export class WeaponLoadout {
   maxCustomAmmo: number;
   akimbo: boolean;
 
-  constructor(dto: WeaponDto, customAmmoList: CustomAmmoLoadout[]) {
+  constructor(
+    dto: WeaponDto,
+    customAmmoList: CustomAmmoLoadout[],
+    akimbo?: boolean
+  ) {
     this.name = dto.name;
-    this.slots = dto.slots;
-    this.imagePath = `data/img/weapons/${dto.name.replace(
-      /[\s\W]/g,
-      '_'
-    )}.png`.toLowerCase();
+    this.slots = dto.slots + (akimbo ? 1 : 0);
+    this.imagePath = `data/img/weapons/${dto.name.replace(/[\s\W]/g, '_')}${
+      akimbo ? '_duals' : ''
+    }.png`.toLowerCase();
     this.ammoTypes = dto.ammoTypes;
-    this.price = dto.price;
+    this.price = dto.price * (akimbo ? 2 : 1);
     this.customAmmo = customAmmoList.filter((x) =>
       dto.customAmmo?.includes(x.id)
     );
     this.maxCustomAmmo = dto.maxCustomAmmo ?? 0;
-    this.akimbo = dto.akimbo ?? false;
+    this.akimbo = akimbo ?? false;
+  }
+
+  public static fromDto(
+    dto: WeaponDto,
+    customAmmoList: CustomAmmoLoadout[]
+  ): WeaponLoadout[] {
+    const res = [new WeaponLoadout(dto, customAmmoList)];
+    if (dto.akimbo) {
+      res.push(new WeaponLoadout(dto, customAmmoList, true));
+    }
+    return res;
   }
 
   public get itemType(): ItemType {

@@ -4,6 +4,7 @@ import { ConsumableLoadout } from './models/consumable.model';
 import { CustomAmmoDto } from './models/custom-ammo.dto';
 import { CustomAmmoLoadout } from './models/custom-ammo.model';
 import { ItemType } from './models/item-type.model';
+import { HuntSettings } from './models/settings-model';
 import { ToolDto } from './models/tool.dto';
 import { ToolLoadout } from './models/tool.model';
 import { WeaponDto } from './models/weapon.dto';
@@ -22,9 +23,12 @@ export const AKIMBO_RATIO = 0.5;
 export class AppComponent implements OnInit {
   public ItemType = ItemType;
   private readonly _apiService: ApiService;
-  public includeCustomAmmo: boolean = true;
-  public quarterMaster: boolean = false;
-  public two = [0, 1];
+  public showSettings: boolean = false;
+
+  public settings: HuntSettings = {
+    quarterMaster: false,
+    includeCustomAmmo: true,
+  };
 
   private _weapons: WeaponLoadout[] = [];
   private _tools: ToolLoadout[] = [];
@@ -38,7 +42,6 @@ export class AppComponent implements OnInit {
     [],
     [],
   ];
-  public randomAkimbo: boolean[] = [false, false];
 
   constructor(apiService: ApiService) {
     this._apiService = apiService;
@@ -54,7 +57,7 @@ export class AppComponent implements OnInit {
   }
 
   private get maxSlotCount(): number {
-    return this.quarterMaster ? 5 : 4;
+    return this.settings.quarterMaster ? 5 : 4;
   }
 
   private randomFromArray<T>(arr: T[], blockList?: T[]): T {
@@ -66,18 +69,28 @@ export class AppComponent implements OnInit {
     return filteredArr[rndmIndex];
   }
 
+  public showSetttings() {
+    this.showSettings = true;
+  }
+
   public randomize() {
     let randomSlotCount = 0;
     this.randomWeapons = [];
 
-    let firstWeapon: WeaponLoadout;
-    if (this.quarterMaster) {
-      firstWeapon = this.randomFromArray(
-        this._weapons.filter((x) => x.slots === 3)
-      );
-    } else {
-      firstWeapon = this.randomFromArray(this._weapons);
+    let weaponPool1 = this._weapons;
+    let weaponPool2 = this._weapons;
+    if (this.settings.quarterMaster) {
+      weaponPool1 = weaponPool2 = weaponPool1.filter((x) => x.slots === 3);
     }
+    if (!(Math.random() < AKIMBO_RATIO)) {
+      weaponPool1 = weaponPool1.filter((x) => !x.akimbo);
+    }
+    if (!(Math.random() < AKIMBO_RATIO)) {
+      weaponPool2 = weaponPool2.filter((x) => !x.akimbo);
+    }
+
+    const firstWeapon = this.randomFromArray(weaponPool1);
+
     const secondWeapon = this.randomFromArray(
       this._weapons.filter(
         (x) => x.slots + firstWeapon.slots <= this.maxSlotCount
@@ -104,27 +117,14 @@ export class AppComponent implements OnInit {
       );
     }
 
-    this.randomAkimbo = [false, false];
-
-    for (let i = 0; i <= 1; i++) {
-      if (Math.random() < AKIMBO_RATIO) {
-        if (randomSlotCount < this.maxSlotCount) {
-          if (this.randomWeapons[i].akimbo) {
-            this.randomAkimbo[i] = true;
-            randomSlotCount++;
-          }
-        }
-      }
-    }
-
-    if (this.quarterMaster && randomSlotCount < this.maxSlotCount) {
+    if (this.settings.quarterMaster && randomSlotCount < this.maxSlotCount) {
       this.randomize();
       return;
     }
 
     this.randomCustomAmmo = [[], []];
 
-    if (this.includeCustomAmmo) {
+    if (this.settings.includeCustomAmmo) {
       for (let i = 0; i < this.randomWeapons.length; i++) {
         const weapon = this.randomWeapons[i];
         if (Math.random() < CUSTOM_AMMO_RATIO) {
@@ -168,7 +168,7 @@ export class AppComponent implements OnInit {
     this._weapons = await this._apiService
       .get<WeaponDto[]>('/data/weapons.json')
       .then((weaponDtos) =>
-        weaponDtos.map((x) => new WeaponLoadout(x, this._customAmmo))
+        weaponDtos.map((x) => WeaponLoadout.fromDto(x, this._customAmmo)).flat()
       );
 
     this.randomize();

@@ -9,12 +9,14 @@
 
 <div class="checkbox-container"
      (click)="fakeClick()">
-  <img src="assets/img/checkbox/box.png">
-  <img *ngIf="isChecked"
-       src="assets/img/checkbox/check.png">
+       <img draggable="false"
+            src="assets/img/checkbox/box.png">
+       <img draggable="false"
+            *ngIf="isChecked"
+            src="assets/img/checkbox/check.png">
 </div>
 
 <label class="cb-container"
        [for]="name">
-  {{text}}
+       {{text}}
 </label>

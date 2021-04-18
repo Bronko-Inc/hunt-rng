@@ -3,23 +3,30 @@
     <img id="main-logo"
          src="assets/img/logo.png">
     <h1>Loadout randomizer</h1>
-    <button (click)="randomize()"
-            id="btn-randomize">Randomize</button>
+    <div id="randomize-button">
+      <button class="unstyled l"
+              (click)="randomize()">
+        Randomize
+      </button>
+      <button class="unstyled r"
+              (click)="showSetttings()">
+        <img src="assets/img/icons/gear.svg">
+      </button>
+    </div>
     <app-loadout [randomConsumables]="randomConsumables"
                  [randomCustomAmmo]="randomCustomAmmo"
                  [randomTools]="randomTools"
                  [randomWeapons]="randomWeapons">
 
     </app-loadout>
-
-    <div id="settings-area">
-      <hunt-ckeck name="quartermaster"
-                  text="Quartermaster"
-                  [(ngModel)]="quarterMaster"></hunt-ckeck>
-    </div>
   </div>
 </div>
 
+<app-settings *ngIf="showSettings"
+              [settings]="settings"
+              (closed)="showSettings = false"
+              (newSettings)="settings = $event">
+</app-settings>
 
 <div id="image-preload-container">
   <img src="assets/img/backdrops/3-slot.png">

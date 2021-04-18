@@ -30,8 +30,39 @@
       max-height: 25%;
     }
 
-    #btn-randomize {
+    #randomize-button {
+      border-radius: 10px;
+      overflow: hidden;
+      width: fit-content;
       align-self: center;
+      display: flex;
+      button {
+        background-color: rgb(127, 27, 29);
+        border: none;
+        outline: none;
+        font-size: 48px;
+        margin: 0;
+        &.r {
+          padding: 0 28px 0 15px;
+        }
+        &.l {
+          padding: 0 15px 0 28px;
+        }
+        cursor: pointer;
+        transition: background-color linear 100ms;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: rgb(97, 21, 22);
+        }
+        &:active {
+          background-color: rgb(66, 14, 15);
+        }
+        img {
+          height: 64px;
+        }
+      }
     }
   }
 }
