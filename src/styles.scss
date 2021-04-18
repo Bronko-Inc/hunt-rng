@@ -39,7 +39,7 @@ button:not(.unstyled) {
 }
 
 .tooltip {
-  background: url("assets/img/backdrops/text-bg2.png");
+  background: url(/assets/img/backdrops/text-bg2.png);
   background-clip: border-box;
   background-size: contain;
   background-repeat: round;
@@ -61,11 +61,11 @@ button:not(.unstyled) {
     height: calc(var(--tooltipFontSize) * 2.6 + 2 * var(--tooltipPadding));
   }
   &::before {
-    background-image: url("assets/img/backdrops/text-bg1.png");
+    background-image: url(/assets/img/backdrops/text-bg1.png);
     left: calc(-2.6 * var(--tooltipFontSize) - 2 * var(--tooltipPadding));
   }
   &::after {
-    background-image: url("assets/img/backdrops/text-bg3.png");
+    background-image: url(/assets/img/backdrops/text-bg3.png);
     right: calc(- 2.6 * var(--tooltipFontSize) - 2 * var(--tooltipPadding));
   }
 }
