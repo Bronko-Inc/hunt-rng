@@ -8,9 +8,10 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { TooltipDirective } from './directives/tooltip';
 import { BoxComponent } from './box/box.component';
 import { LoadoutComponent } from './loadout/loadout.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
-  declarations: [AppComponent, TooltipDirective, CheckboxComponent, BoxComponent, LoadoutComponent],
+  declarations: [AppComponent, TooltipDirective, CheckboxComponent, BoxComponent, LoadoutComponent, SettingsComponent],
   imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
