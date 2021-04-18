@@ -73,6 +73,11 @@ export class AppComponent implements OnInit {
     this.showSettings = true;
   }
 
+  public saveSettings(newSettings: HuntSettings) {
+    this.settings = newSettings;
+    this.randomize();
+  }
+
   public randomize() {
     let randomSlotCount = 0;
     this.randomWeapons = [];
