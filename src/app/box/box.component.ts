@@ -21,7 +21,6 @@ export class BoxComponent {
   }
 
   @Input() price: number = 0;
-  @Output() loaded = new EventEmitter<void>();
 
   public imagePath: string = '';
   public imgLoaded = false;
@@ -47,7 +46,6 @@ export class BoxComponent {
     }
   }
   imgDidLoad() {
-    this.loaded.next();
     this.imgLoaded = true;
   }
 }

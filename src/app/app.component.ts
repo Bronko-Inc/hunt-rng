@@ -156,7 +156,7 @@ export class AppComponent implements OnInit {
     this.randomConsumables.forEach((x) => (this.totalPrice += x.price));
     this.randomWeapons.forEach((x) => (this.totalPrice += x.price));
     this.randomCustomAmmo.forEach((x) =>
-      x.forEach((y) => (this.totalPrice += y?.price))
+      x?.forEach((y) => (this.totalPrice += y?.price ?? 0))
     );
   }
 
