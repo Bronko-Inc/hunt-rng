@@ -15,6 +15,9 @@ export class BoxComponent {
   @Input() set imgPath(value: string) {
     this.imagePath = value;
     this._prefetchService.prefetch(value);
+    if (this._prefetchService.isCached(this.imagePath)) {
+      this.imgLoaded = true;
+    }
   }
 
   @Input() price: number = 0;

@@ -39,6 +39,10 @@ export class PrefetchService {
     }
   }
 
+  public isCached(path: string) {
+    return this._list.some((x) => x.path === path && x.cached);
+  }
+
   public get preloadData() {
     return this._list;
   }
