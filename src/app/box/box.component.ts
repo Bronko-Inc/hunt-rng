@@ -1,18 +1,31 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ItemType } from '../models/item-type.model';
+import { PrefetchService } from '../services/prefetch.service';
 
 @Component({
   selector: 'app-box',
   templateUrl: './box.component.html',
   styleUrls: ['./box.component.scss'],
 })
-export class BoxComponent implements OnInit {
+export class BoxComponent {
   ItemType = ItemType;
-  @Input() itemType: ItemType = ItemType.UNKNOWN;
-  @Input() imgPath: string = '';
-  @Input() price: number = 0;
+  private readonly _prefetchService: PrefetchService;
 
-  constructor() {}
+  @Input() itemType: ItemType = ItemType.UNKNOWN;
+  @Input() set imgPath(value: string) {
+    this.imagePath = value;
+    this._prefetchService.prefetch(value);
+  }
+
+  @Input() price: number = 0;
+  @Output() loaded = new EventEmitter<void>();
+
+  public imagePath: string = '';
+  public imgLoaded = false;
+
+  constructor(prefetchService: PrefetchService) {
+    this._prefetchService = prefetchService;
+  }
 
   public get backdropImgPath(): string {
     switch (this.itemType) {
@@ -30,6 +43,8 @@ export class BoxComponent implements OnInit {
         return '';
     }
   }
-
-  ngOnInit(): void {}
+  imgDidLoad() {
+    this.loaded.next();
+    this.imgLoaded = true;
+  }
 }

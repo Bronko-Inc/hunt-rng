@@ -10,6 +10,7 @@ import { ToolLoadout } from './models/tool.model';
 import { WeaponDto } from './models/weapon.dto';
 import { WeaponLoadout } from './models/weapon.model';
 import { ApiService } from './services/api.service';
+import { PrefetchService } from './services/prefetch.service';
 
 export const CUSTOM_AMMO_RATIO = 0.5;
 export const CUSTOM_AMMO_MULTIPLE_RATIO = 0.25;
@@ -23,6 +24,8 @@ export const AKIMBO_RATIO = 0.5;
 export class AppComponent implements OnInit {
   public ItemType = ItemType;
   private readonly _apiService: ApiService;
+  private readonly _prefetchService: PrefetchService;
+
   public showSettings: boolean = false;
 
   public settings: HuntSettings = {
@@ -44,17 +47,9 @@ export class AppComponent implements OnInit {
   ];
   public totalPrice: number = 0;
 
-  constructor(apiService: ApiService) {
+  constructor(apiService: ApiService, prefetchService: PrefetchService) {
     this._apiService = apiService;
-  }
-
-  public get preloadImageLinks(): string[] {
-    return [
-      ...this._weapons.map((x) => x.imagePath),
-      ...this._tools.map((x) => x.imagePath),
-      ...this._consumables.map((x) => x.imagePath),
-      ...this._customAmmo.map((x) => x.imagePath),
-    ];
+    this._prefetchService = prefetchService;
   }
 
   private get maxSlotCount(): number {
@@ -185,5 +180,16 @@ export class AppComponent implements OnInit {
       );
 
     this.randomize();
+
+    this._prefetchService.init([
+      ...this._weapons.map((x) => x.imagePath),
+      ...this._tools.map((x) => x.imagePath),
+      ...this._consumables.map((x) => x.imagePath),
+      ...this._customAmmo.map((x) => x.imagePath),
+    ]);
+  }
+
+  public get preloadData() {
+    return this._prefetchService.preloadData;
   }
 }

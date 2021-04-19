@@ -1,7 +1,13 @@
 <div class="box-container"
      [class.ammo-container]="itemType === ItemType.AMMO">
-  <img class="item-image"
-       [src]="imgPath">
-  <img [src]="backdropImgPath">
-  <span class="price-tag">${{price}}</span>
+     <img class="item-image"
+          [src]="imagePath"
+          [hidden]="!imgLoaded"
+          (load)="imgDidLoad()">
+     <img class="item-image"
+          src="assets/img/loading.gif"
+          [hidden]="imgLoaded">
+
+     <img [src]="backdropImgPath">
+     <span class="price-tag">${{price}}</span>
 </div>

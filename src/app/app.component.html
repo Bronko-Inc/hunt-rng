@@ -42,6 +42,8 @@
   <img src="assets/img/backdrops/text-bg3.png">
   <img src="assets/img/checkbox/box.png">
   <img src="assets/img/checkbox/check.png">
-  <img *ngFor="let i of preloadImageLinks"
-       [src]="i">
+  <img src="assets/img/loading.gif">
+  <img *ngFor="let i of preloadData"
+       [src]="i.path"
+       (load)="i.loaded()">
 </div>
