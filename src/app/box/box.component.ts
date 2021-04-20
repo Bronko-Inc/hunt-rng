@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ItemType } from '../models/item-type.model';
 import { PrefetchService } from '../services/prefetch.service';
 
@@ -21,6 +21,8 @@ export class BoxComponent {
   }
 
   @Input() price: number = 0;
+  @Input() lockCallback: () => void = () => {};
+  @Input() locked: boolean = false;
 
   public imagePath: string = '';
   public imgLoaded = false;
@@ -45,7 +47,19 @@ export class BoxComponent {
         return '';
     }
   }
-  imgDidLoad() {
+
+  public get isAmmoContainer() {
+    return this.itemType === ItemType.AMMO;
+  }
+
+  public imgDidLoad() {
     this.imgLoaded = true;
+  }
+
+  public toggleLock() {
+    if (this.isAmmoContainer) {
+      return;
+    }
+    this.lockCallback();
   }
 }

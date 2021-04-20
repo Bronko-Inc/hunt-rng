@@ -1,13 +1,23 @@
 <div class="box-container"
-     [class.ammo-container]="itemType === ItemType.AMMO">
+     (click)="toggleLock()"
+     [class.ammo-container]="isAmmoContainer">
+
+     <img class="lock-img"
+          src="assets/img/lock.png"
+          [hidden]="!locked"
+          draggable="false">
+
      <img class="item-image"
           [src]="imagePath"
           [hidden]="!imgLoaded"
-          (load)="imgDidLoad()">
+          (load)="imgDidLoad()"
+          draggable="false">
      <img class="item-image"
           src="assets/img/loading.gif"
-          [hidden]="imgLoaded">
+          [hidden]="imgLoaded"
+          draggable="false">
 
-     <img [src]="backdropImgPath">
+     <img [src]="backdropImgPath"
+          draggable="false">
      <span class="price-tag">${{price}}</span>
 </div>

@@ -1,14 +1,12 @@
 import { AmmoType } from './ammo-type';
 import { CustomAmmoLoadout } from './custom-ammo.model';
 import { ItemType } from './item-type.model';
+import { Loadout } from './loadout.model';
 import { WeaponDto } from './weapon.dto';
 
-export class WeaponLoadout {
-  name: string;
+export class WeaponLoadout extends Loadout {
   slots: number;
-  imagePath: string;
   ammoTypes: AmmoType[];
-  price: number;
   customAmmo: CustomAmmoLoadout[];
   maxCustomAmmo: number;
   akimbo: boolean;
@@ -18,13 +16,16 @@ export class WeaponLoadout {
     customAmmoList: CustomAmmoLoadout[],
     akimbo?: boolean
   ) {
-    this.name = dto.name;
+    super(
+      dto.name,
+      `data/img/weapons/${dto.name.replace(/[\s\W]/g, '_')}${
+        akimbo ? '_duals' : ''
+      }.png`,
+      dto.price * (akimbo ? 2 : 1)
+    );
+
     this.slots = dto.slots + (akimbo ? 1 : 0);
-    this.imagePath = `data/img/weapons/${dto.name.replace(/[\s\W]/g, '_')}${
-      akimbo ? '_duals' : ''
-    }.png`.toLowerCase();
     this.ammoTypes = dto.ammoTypes;
-    this.price = dto.price * (akimbo ? 2 : 1);
     this.customAmmo = customAmmoList.filter((x) =>
       dto.customAmmo?.includes(x.id)
     );

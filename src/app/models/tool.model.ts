@@ -1,18 +1,15 @@
 import { ToolDto } from './tool.dto';
+import { Loadout } from './loadout.model';
 
-export class ToolLoadout {
-  name: string;
-  knifeAndHeal: boolean;
-  imagePath: string;
-  price: number;
+export class ToolLoadout extends Loadout {
+  public knifeAndHeal: boolean;
 
   constructor(dto: ToolDto) {
-    this.name = dto.name;
+    super(
+      dto.name,
+      `data/img/tools/${dto.name.replace(/[\s\W]/g, '_')}.png`,
+      dto.price
+    );
     this.knifeAndHeal = dto.knifeAndHeal;
-    this.imagePath = `data/img/tools/${dto.name.replace(
-      /[\s\W]/g,
-      '_'
-    )}.png`.toLowerCase();
-    this.price = dto.price;
   }
 }

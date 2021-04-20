@@ -1,16 +1,12 @@
 import { ConsumableDto } from './consumable.dto';
+import { Loadout } from './loadout.model';
 
-export class ConsumableLoadout {
-  name: string;
-  imagePath: string;
-  price: number;
-
+export class ConsumableLoadout extends Loadout {
   constructor(dto: ConsumableDto) {
-    this.name = dto.name;
-    this.imagePath = `data/img/consumables/${dto.name.replace(
-      /[\s\W]/g,
-      '_'
-    )}.png`.toLowerCase();
-    this.price = dto.price;
+    super(
+      dto.name,
+      `data/img/consumables/${dto.name.replace(/[\s\W]/g, '_')}.png`,
+      dto.price
+    );
   }
 }
