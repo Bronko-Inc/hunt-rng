@@ -190,6 +190,7 @@ export class AppComponent implements OnInit {
       x?.locked ? x : undefined
     );
 
+    // Fill random tool slots with a knife and heal item if the setting is enabled
     if (this.settings.knifeAndHeal) {
       const randomSlot1 = this.randomFromArray([0, 1, 2, 3]);
       const randomSlot2 = this.randomFromArray([0, 1, 2, 3], [randomSlot1]);
