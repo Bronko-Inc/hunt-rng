@@ -1,5 +1,6 @@
 export interface ToolDto {
   name: string;
-  knifeAndHeal: boolean;
+  isKnife: boolean;
+  isHeal: boolean;
   price: number;
 }

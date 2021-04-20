@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
   public settings: HuntSettings = {
     quarterMaster: false,
     includeCustomAmmo: true,
+    knifeAndHeal: false,
   };
 
   private _weapons: WeaponLoadout[] = [];
@@ -131,15 +132,14 @@ export class AppComponent implements OnInit {
     this.totalPrice = 0;
     let randomSlotCount = 0;
 
-    randomSlotCount = this.selectRandomWeapons(randomSlotCount);
-
-    this.selectRandomItems();
-
     // If quarterMaster is active and the randomSlotcoutn is less than the maxSlotCount -> Try again
+    randomSlotCount = this.selectRandomWeapons(randomSlotCount);
     if (this.settings.quarterMaster && randomSlotCount < this.maxSlotCount) {
       this.randomize();
       return;
     }
+
+    this.selectRandomItems();
 
     this.selectRandomCustomAmmo();
 
@@ -189,9 +189,26 @@ export class AppComponent implements OnInit {
     this._randomConsumables = this._randomConsumables.map((x) =>
       x?.locked ? x : undefined
     );
+
+    if (this.settings.knifeAndHeal) {
+      const randomSlot1 = this.randomFromArray([0, 1, 2, 3]);
+      const randomSlot2 = this.randomFromArray([0, 1, 2, 3], [randomSlot1]);
+
+      this._randomTools[randomSlot1] = this.randomFromArray(
+        this._tools.filter((x) => x.isKnife),
+        this.randomTools
+      );
+      this._randomTools[randomSlot2] = this.randomFromArray(
+        this._tools.filter((x) => x.isHeal),
+        this.randomTools
+      );
+    }
+
     for (let i = 0; i < 4; i++) {
       this._randomTools[i] ??= this.randomFromArray(
-        this._tools,
+        this._tools.filter(
+          (x) => !this.randomTools.some((r) => r.isKnife) || !x.isKnife
+        ),
         this.randomTools
       );
       this._randomConsumables[i] ??= this.randomFromArray(

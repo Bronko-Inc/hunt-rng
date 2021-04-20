@@ -2,7 +2,8 @@ import { ToolDto } from './tool.dto';
 import { Loadout } from './loadout.model';
 
 export class ToolLoadout extends Loadout {
-  public knifeAndHeal: boolean;
+  public isKnife: boolean;
+  public isHeal: boolean;
 
   constructor(dto: ToolDto) {
     super(
@@ -10,6 +11,7 @@ export class ToolLoadout extends Loadout {
       `data/img/tools/${dto.name.replace(/[\s\W]/g, '_')}.png`,
       dto.price
     );
-    this.knifeAndHeal = dto.knifeAndHeal;
+    this.isHeal = dto.isHeal;
+    this.isKnife = dto.isKnife;
   }
 }
