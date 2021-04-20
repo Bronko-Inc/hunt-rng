@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   public settings: HuntSettings = {
     quarterMaster: false,
     includeCustomAmmo: true,
-    kniveAndHeal: false,
+    knifeAndHeal: false,
   };
 
   private _weapons: WeaponLoadout[] = [];
@@ -190,7 +190,7 @@ export class AppComponent implements OnInit {
       x?.locked ? x : undefined
     );
 
-    if (this.settings.kniveAndHeal) {
+    if (this.settings.knifeAndHeal) {
       const randomSlot1 = this.randomFromArray([0, 1, 2, 3]);
       const randomSlot2 = this.randomFromArray([0, 1, 2, 3], [randomSlot1]);
 
