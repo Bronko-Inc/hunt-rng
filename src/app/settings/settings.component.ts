@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HuntSettings } from '../models/settings-model';
 
 @Component({
-  selector: 'app-settings',
+  selector: 'awd-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss'],
 })

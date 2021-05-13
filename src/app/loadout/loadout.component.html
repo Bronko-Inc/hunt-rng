@@ -4,20 +4,20 @@
          class="column">
       <div class="item-container">
         <div class="item-ammo-container">
-          <app-box [itemType]="weapon.itemType"
+          <awd-box [itemType]="weapon.itemType"
                    [imgPath]="weapon.imagePath"
                    [tooltip]="weapon.name"
                    [price]="weapon.price"
                    [lockCallback]="weapon.lock.bind(weapon)"
                    [locked]="weapon.locked"
-                   [itemName]="weapon.name"></app-box>
+                   [itemName]="weapon.name"></awd-box>
           <ng-container *ngFor="let ammo of randomCustomAmmo[i]">
-            <app-box *ngIf="ammo"
+            <awd-box *ngIf="ammo"
                      [itemType]="ItemType.AMMO"
                      [imgPath]="ammo.imagePath"
                      [tooltip]="ammo.name"
                      [price]="ammo.price"
-                     [itemName]="ammo.name"></app-box>
+                     [itemName]="ammo.name"></awd-box>
           </ng-container>
         </div>
       </div>
@@ -31,28 +31,28 @@
     <div class="row">
       <div *ngFor="let tool of randomTools"
            class="column">
-        <app-box [imgPath]="tool.imagePath"
+        <awd-box [imgPath]="tool.imagePath"
                  [itemType]="ItemType.ITEM"
                  [tooltip]="tool.name"
                  [price]="tool.price"
                  [lockCallback]="tool.lock.bind(tool)"
                  [locked]="tool.locked"
                  [itemName]="tool.name">
-        </app-box>
+        </awd-box>
       </div>
     </div>
     <span>Tools</span>
     <div class="row">
       <div *ngFor="let consumable of randomConsumables"
            class="column">
-        <app-box [imgPath]="consumable.imagePath"
+        <awd-box [imgPath]="consumable.imagePath"
                  [itemType]="ItemType.ITEM"
                  [tooltip]="consumable.name"
                  [price]="consumable.price"
                  [lockCallback]="consumable.lock.bind(consumable)"
                  [locked]="consumable.locked"
                  [itemName]="consumable.name">
-        </app-box>
+        </awd-box>
       </div>
     </div>
     <span>Consumables</span>

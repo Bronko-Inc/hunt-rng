@@ -17,7 +17,7 @@ export const CUSTOM_AMMO_MULTIPLE_RATIO = 0.25;
 export const AKIMBO_RATIO = 0.5;
 
 @Component({
-  selector: 'app-root',
+  selector: 'awd-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

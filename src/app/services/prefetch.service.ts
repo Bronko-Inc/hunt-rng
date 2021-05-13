@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class PrefetchService {
-  private _list: { path: string; loaded: () => void; cached: boolean }[] = [];
+  private readonly _list: { path: string; loaded: () => void; cached: boolean }[] = [];
   private _fullList: string[] = [];
   private _totalCount: number = 0;
 

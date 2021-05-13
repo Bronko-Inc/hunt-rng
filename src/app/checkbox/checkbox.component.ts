@@ -2,7 +2,7 @@ import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'hunt-ckeck',
+  selector: 'awd-hunt-check',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss'],
   providers: [

@@ -46,14 +46,14 @@ export class WeaponLoadout extends Loadout {
 
   public get itemType(): ItemType {
     switch (this.slots) {
-      case 1:
-        return ItemType.WEAPON_1;
-      case 2:
-        return ItemType.WEAPON_2;
-      case 3:
-        return ItemType.WEAPON_3;
-      default:
-        return ItemType.UNKNOWN;
+    case 1:
+      return ItemType.WEAPON_1;
+    case 2:
+      return ItemType.WEAPON_2;
+    case 3:
+      return ItemType.WEAPON_3;
+    default:
+      return ItemType.UNKNOWN;
     }
   }
 }

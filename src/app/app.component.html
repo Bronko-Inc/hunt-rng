@@ -1,64 +1,64 @@
 <div id="main-container">
-  <div id="main-card">
-    <img id="main-logo"
-         src="assets/img/logo.png"
-         alt="Hunt RNG logo">
-    <div id="randomize-button">
-      <button class="unstyled"
-              (click)="randomize()">
-        Randomize
-      </button>
-      <button class="unstyled"
-              (click)="showSetttings()"
-              aria-label="settings">
-        <img src="assets/img/icons/gear.svg"
-             alt="gear icon">
-      </button>
-    </div>
-    <app-loadout [randomConsumables]="randomConsumables"
-                 [randomCustomAmmo]="randomCustomAmmo"
-                 [randomTools]="randomTools"
-                 [randomWeapons]="randomWeapons">
+     <div id="main-card">
+          <img id="main-logo"
+               src="assets/img/logo.png"
+               alt="Hunt RNG logo">
+          <div id="randomize-button">
+               <button class="unstyled"
+                       (click)="randomize()">
+                    Randomize
+               </button>
+               <button class="unstyled"
+                       (click)="showSetttings()"
+                       aria-label="settings">
+                    <img src="assets/img/icons/gear.svg"
+                         alt="gear icon">
+               </button>
+          </div>
+          <awd-loadout [randomConsumables]="randomConsumables"
+                       [randomCustomAmmo]="randomCustomAmmo"
+                       [randomTools]="randomTools"
+                       [randomWeapons]="randomWeapons">
 
-    </app-loadout>
-    <div id="main-price">
-      <span id="main-price-span"
-            class="tooltip visible">
-        Total: ${{totalPrice}}
-      </span>
-    </div>
-  </div>
+          </awd-loadout>
+          <div id="main-price">
+               <span id="main-price-span"
+                     class="tooltip visible">
+                    Total: ${{totalPrice}}
+               </span>
+          </div>
+     </div>
 </div>
 
-<app-settings *ngIf="showSettings"
+<awd-settings *ngIf="showSettings"
               [settings]="settings"
               (closed)="showSettings = false"
               (newSettings)="saveSettings($event)">
-</app-settings>
+</awd-settings>
 
 <div id="image-preload-container">
-  <img src="assets/img/backdrops/3-slot.png"
-       alt="">
-  <img src="assets/img/backdrops/2-slot.png"
-       alt="">
-  <img src="assets/img/backdrops/1-slot.png"
-       alt="">
-  <img src="assets/img/backdrops/text-bg1.png"
-       alt="">
-  <img src="assets/img/backdrops/text-bg2.png"
-       alt="">
-  <img src="assets/img/backdrops/text-bg3.png"
-       alt="">
-  <img src="assets/img/backdrops/ammo.png"
-       alt="">
-  <img src="assets/img/checkbox/box.png"
-       alt="">
-  <img src="assets/img/checkbox/check.png"
-       alt="">
-  <img src="assets/img/loading.gif"
-       alt="">
-  <img *ngFor="let i of preloadData"
-       [src]="i.path"
-       alt=""
-       (load)="i.loaded()">
+     <img src="assets/img/backdrops/3-slot.png"
+          alt="">
+     <img src="assets/img/backdrops/2-slot.png"
+          alt="">
+     <img src="assets/img/backdrops/1-slot.png"
+          alt="">
+     <img src="assets/img/backdrops/text-bg1.png"
+          alt="">
+     <img src="assets/img/backdrops/text-bg2.png"
+          alt="">
+     <img src="assets/img/backdrops/text-bg3.png"
+          alt="">
+     <img src="assets/img/backdrops/ammo.png"
+          alt="">
+     <img src="assets/img/checkbox/box.png"
+          alt="">
+     <img src="assets/img/checkbox/check.png"
+          alt="">
+     <img src="assets/img/loading.gif"
+          alt="">
+     <img *ngFor="let i of preloadData"
+          [src]="i.path"
+          alt=""
+          (load)="i.loaded()">
 </div>
