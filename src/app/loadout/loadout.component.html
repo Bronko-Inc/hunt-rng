@@ -9,13 +9,15 @@
                    [tooltip]="weapon.name"
                    [price]="weapon.price"
                    [lockCallback]="weapon.lock.bind(weapon)"
-                   [locked]="weapon.locked"></app-box>
+                   [locked]="weapon.locked"
+                   [itemName]="weapon.name"></app-box>
           <ng-container *ngFor="let ammo of randomCustomAmmo[i]">
             <app-box *ngIf="ammo"
                      [itemType]="ItemType.AMMO"
                      [imgPath]="ammo.imagePath"
                      [tooltip]="ammo.name"
-                     [price]="ammo.price"></app-box>
+                     [price]="ammo.price"
+                     [itemName]="ammo.name"></app-box>
           </ng-container>
         </div>
       </div>
@@ -34,7 +36,8 @@
                  [tooltip]="tool.name"
                  [price]="tool.price"
                  [lockCallback]="tool.lock.bind(tool)"
-                 [locked]="tool.locked">
+                 [locked]="tool.locked"
+                 [itemName]="tool.name">
         </app-box>
       </div>
     </div>
@@ -47,7 +50,8 @@
                  [tooltip]="consumable.name"
                  [price]="consumable.price"
                  [lockCallback]="consumable.lock.bind(consumable)"
-                 [locked]="consumable.locked">
+                 [locked]="consumable.locked"
+                 [itemName]="consumable.name">
         </app-box>
       </div>
     </div>

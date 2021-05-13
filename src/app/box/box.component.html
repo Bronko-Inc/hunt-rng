@@ -5,19 +5,23 @@
      <img class="lock-img"
           src="assets/img/lock.png"
           [hidden]="!locked"
-          draggable="false">
+          draggable="false"
+          alt="lock icon">
 
      <img class="item-image"
           [src]="imagePath"
           [hidden]="!imgLoaded"
           (load)="imgDidLoad()"
-          draggable="false">
+          draggable="false"
+          [alt]="itemName">
      <img class="item-image"
           src="assets/img/loading.gif"
           [hidden]="imgLoaded"
-          draggable="false">
+          draggable="false"
+          alt="">
 
      <img [src]="backdropImgPath"
-          draggable="false">
+          draggable="false"
+          alt="">
      <span class="price-tag">${{price}}</span>
 </div>

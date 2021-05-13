@@ -23,6 +23,7 @@ export class BoxComponent {
   @Input() price: number = 0;
   @Input() lockCallback: () => void = () => {};
   @Input() locked: boolean = false;
+  @Input() itemName: string = '';
 
   public imagePath: string = '';
   public imgLoaded = false;

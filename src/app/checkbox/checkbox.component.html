@@ -5,18 +5,18 @@
        [disabled]="disabled"
        [name]="name">
 
-
-
 <div class="checkbox-container"
      (click)="fakeClick()">
-       <img draggable="false"
-            src="assets/img/checkbox/box.png">
-       <img draggable="false"
-            *ngIf="isChecked"
-            src="assets/img/checkbox/check.png">
+     <img draggable="false"
+          src="assets/img/checkbox/box.png"
+          alt="">
+     <img draggable="false"
+          *ngIf="isChecked"
+          src="assets/img/checkbox/check.png"
+          alt="">
 </div>
 
 <label class="cb-container"
        [for]="name">
-       {{text}}
+     {{text}}
 </label>
