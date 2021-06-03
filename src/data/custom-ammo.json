@@ -174,7 +174,7 @@
   {
     "id": 35,
     "name": "Shotgun Slug Ammo",
-    "price": 150
+    "price": 200
   },
   {
     "id": 36,
@@ -183,20 +183,20 @@
   },
   {
     "id": 37,
-    "name": "Shotgun Starshell Ammo",
+    "name": "LeMat Shotgun Starshell Ammo",
     "price": 10,
     "blocklist": [38, 39]
   },
   {
     "id": 38,
-    "name": "Shotgun Dragon Breath Ammo",
+    "name": "LeMat Shotgun Dragon Breath Ammo",
     "price": 50,
     "blocklist": [37, 39]
   },
   {
     "id": 39,
-    "name": "Shotgun Slug Ammo",
-    "price": 150,
+    "name": "LeMat Shotgun Slug Ammo",
+    "price": 200,
     "blocklist": [37, 38]
   },
   {
