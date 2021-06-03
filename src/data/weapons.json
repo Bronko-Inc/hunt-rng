@@ -447,7 +447,7 @@
     "slots": 3,
     "price": 309,
     "maxCustomAmmo": 1,
-    "customAmmo": [36, 34]
+    "customAmmo": [34, 35, 36]
   },
   {
     "name": "Caldwell Rival 78",
@@ -455,7 +455,7 @@
     "slots": 3,
     "price": 100,
     "maxCustomAmmo": 1,
-    "customAmmo": [36, 35]
+    "customAmmo": [34, 35, 36]
   },
   {
     "name": "Crown & King Auto-5",
@@ -463,7 +463,7 @@
     "slots": 3,
     "price": 600,
     "maxCustomAmmo": 1,
-    "customAmmo": [34]
+    "customAmmo": [34, 35]
   },
   {
     "name": "Romero 77",
@@ -487,7 +487,7 @@
     "slots": 3,
     "price": 188,
     "maxCustomAmmo": 1,
-    "customAmmo": [36, 33, 35]
+    "customAmmo": [33, 34, 35, 36]
   },
   {
     "name": "Specter 1882 Bayonet",
@@ -495,7 +495,7 @@
     "slots": 3,
     "price": 223,
     "maxCustomAmmo": 1,
-    "customAmmo": [36, 33, 35]
+    "customAmmo": [33, 34, 35, 36]
   },
   {
     "name": "Winfield 1887 Terminus Handcannon",
@@ -503,7 +503,7 @@
     "slots": 2,
     "price": 289,
     "maxCustomAmmo": 1,
-    "customAmmo": [36, 34]
+    "customAmmo": [34, 35, 36]
   },
   {
     "name": "Caldwell Rival 78 Handcannon",
@@ -511,7 +511,7 @@
     "slots": 2,
     "price": 85,
     "maxCustomAmmo": 1,
-    "customAmmo": [36, 35]
+    "customAmmo": [34, 35, 36]
   },
   {
     "name": "Romero 77 Handcannon",
@@ -535,7 +535,7 @@
     "slots": 2,
     "price": 164,
     "maxCustomAmmo": 1,
-    "customAmmo": [36, 33, 35]
+    "customAmmo": [33, 34, 35, 36]
   },
   {
     "name": "Bomb Lance",
