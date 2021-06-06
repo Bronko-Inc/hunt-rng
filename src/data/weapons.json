@@ -398,7 +398,7 @@
     "slots": 3,
     "price": 130,
     "maxCustomAmmo": 2,
-    "customAmmo": [26, 27]
+    "customAmmo": [26, 27, 56]
   },
   {
     "name": "Sparks LRR Silencer",
@@ -446,7 +446,7 @@
     "slots": 1,
     "price": 275,
     "maxCustomAmmo": 1,
-    "customAmmo": [25],
+    "customAmmo": [25, 55],
     "akimbo": true
   },
   {

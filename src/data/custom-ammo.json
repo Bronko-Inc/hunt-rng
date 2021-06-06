@@ -238,5 +238,15 @@
     "id": 54,
     "name": "Hand Crossbow Choke Bolt",
     "price": 20
+  },
+  {
+    "id": 55,
+    "name": "Caldwell Conversion Uppercut Explosive Ammo",
+    "price": 120
+  },
+  {
+    "id": 56,
+    "name": "Sparks LRR Full Metal Jacket Ammo",
+    "price": 85
   }
 ]
