@@ -210,7 +210,15 @@
     "name": "Winfield M1876 Centennial",
     "ammoTypes": [2],
     "slots": 3,
-    "price": 338,
+    "price": 277,
+    "maxCustomAmmo": 1,
+    "customAmmo": [20, 21]
+  },
+  {
+    "name": "Winfield M1876 Centennial Sniper",
+    "ammoTypes": [2],
+    "slots": 3,
+    "price": 298,
     "maxCustomAmmo": 1,
     "customAmmo": [20, 21]
   },
