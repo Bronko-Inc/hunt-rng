@@ -1,7 +1,7 @@
 {
   "extends": ["@awdware/eslint-config-angular"],
   "parserOptions": {
-    "project": "tsconfig.app.json"
+    "project": "tsconfig.json"
   },
   "rules": {
     "@typescript-eslint/no-inferrable-types": "off"
