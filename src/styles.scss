@@ -66,6 +66,6 @@ button:not(.unstyled) {
   }
   &::after {
     background-image: url(/assets/img/backdrops/text-bg3.png);
-    right: calc(- 2.6 * var(--tooltipFontSize) - 2 * var(--tooltipPadding));
+    right: calc(-2.6 * var(--tooltipFontSize) - 2 * var(--tooltipPadding));
   }
 }
