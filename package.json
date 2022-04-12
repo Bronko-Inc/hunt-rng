@@ -1,6 +1,10 @@
 {
   "name": "hunt-loadout-randomizer",
   "version": "0.0.0",
+  "author": {
+    "name": "Janik Schumacher (LoaderB0T)",
+    "url": "https://awdware.de"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
